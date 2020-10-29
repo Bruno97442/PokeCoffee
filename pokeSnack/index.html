@@ -1,63 +1,319 @@
 <html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Page produit</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PokeSnacks</title>
-</head>
+	</head>
+	<body link="brown" alink="brown" vlink="brown">
 
-<body >
-    <table id="modele" width="280" height="400" align="center" background="img/pokeSnack/essai1.jpg">
-        <thead valign=top>
-            <tr>
-                <th rowspan="2" width=6 ></th> 
-                <th colspan="3" height=1>
-                    <font size="1" height=1>
-                        <h2 align="left">Le repas de Pikachu</h2>
-                    </font>
-                </th>
-                <th rowspan="2" width=6></th>
-            </tr>
-            <tr height="160">
-                <th colspan="4" valign=center colspan="2" height=1 >
-                    <!-- <th valign = center  height="200"> -->
-                    <img width="240" height="150" src="img/pokeSnack/slidepika.png" alt="" >
-                </th>
+		<marquee behavior="alternate">
+			<img src="img/slide1.PNG" alt="" border="4">
+		</marquee>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td rowspan="2"></td>
-                <td rowspan="2" width=25></td>
-                <td rowspan="1" valign = baseline align = center width=150 height=100>
-                    
-                        <p align=left ><font size="3"  >Tant de choses que vous voulez manger !
-                            Un autre joli visage de Pikachu apparaît lorsque vous avez fini de manger !</font></p>
-                    
-                </td>
-                
-                <td width=6 rowspan="1"  colspan ="2" align = center>
-                    <font size="2">
-                        <h3 >9.99&euro;</h3>
-                        
-                    </font>
-                    <br>
-                   
-                </td>
-            
-            </tr>
-            <tr>
-                <td colspan="2" valign=top  align = right>
-                     <form action="" method="get">
-                        <input type="submit" value="Achetez">&nbsp;
-                        
-                    </form>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+		<h1 align="center">Nos Snacks:</h1>
+		<div class="lessnacks">
+			<table align="center">
 
-</body>
+				<tbody>
+					<tr align="center">
+						<td>
+							<table id="carte0" width="280" height="400" align="center" background="img/essai1.jpg">
+								<thead valign="top">
+									<tr>
+										<th rowspan="2" width="6"></th>
+										<th colspan="3" height="1">
+											<font size="1" height="1">
+												<h2 align="left">Le repas de Pikachu</h2>
+											</font>
+										</th>
+										<th rowspan="2" width="6"></th>
+									</tr>
+									<tr height="160">
+										<th
+											colspan="4" valign="center" height="1">
+											<!-- <th valign = center  height="200"> -->
+											<a href="produitpika.html">
+												<img width="240" height="150" src="img/produitpika/slidepika.png" alt="">
 
+											</a>
+										</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="2"></td>
+										<td rowspan="2" width="25"></td>
+										<td rowspan="1" valign="baseline" align="center" width="150" height="100">
+
+											<p align="left">
+												<font size="3">Un autre joli visage de Pikachu apparaît lorsque vous avez fini de manger !
+													<a href="produitpika.html"><br>[voir plus...]</a>
+												</font>
+											</p>
+											<a href="produitpika.html"></a>
+										</td>
+
+										<td width="6" rowspan="1" colspan="2" align="center">
+											<font size="2">
+												<h3>9.99€</h3>
+
+											</font>
+											<br>
+										</td>
+
+									</tr>
+									<tr>
+										<td colspan="2" valign="top" align="right">
+											<form action="../form/commander.html" method="get">
+												<input type="hidden" name="produitpika">
+												<input type="submit" value="Achetez">&nbsp;
+											</form>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td>
+							<table id="carte1" width="280" height="400" align="center" background="img/essai1.jpg">
+								<thead valign="top">
+									<tr>
+										<th rowspan="2" width="6"></th>
+										<th colspan="3" height="1">
+											<font size="1" height="1">
+												<h2 align="left">Le repas d'évoli</h2>
+											</font>
+										</th>
+										<th rowspan="2" width="6"></th>
+									</tr>
+									<tr height="160">
+										<th
+											colspan="4" valign="center" height="1">
+											<!-- <th valign = center  height="200"> -->
+											<a href="produitevoli.html">
+												<img width="240" height="150" src="img/produitevoli/evoli.png" alt="">
+
+											</a>
+										</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="2"></td>
+										<td rowspan="2" width="25"></td>
+										<td rowspan="1" valign="baseline" align="center" width="150" height="100">
+
+											<p align="left">
+												<font size="3">Un repas d'évoli populaire qui est maintenant plus grand que jamais !
+													<a href="produitevoli.html"><br>[voir plus...]</a>
+												</font>
+											</p>
+											<a href="produitevoli.html"></a>
+										</td>
+
+										<td width="6" rowspan="1" colspan="2" align="center">
+											<font size="2">
+												<h3>9.99€</h3>
+
+											</font>
+											<br>
+										</td>
+
+									</tr>
+									<tr>
+										<td colspan="2" valign="top" align="right">
+											<form action="../form/commander.html" method="get">
+												<input type="hidden" name="produitevoli">
+												<input type="submit" value="Achetez">&nbsp;
+											</form>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td>
+							<table id="carte2" width="280" height="400" align="center" background="img/essai1.jpg">
+								<thead valign="top">
+									<tr>
+										<th rowspan="2" width="6"></th>
+										<th colspan="3" height="1">
+											<font size="1" height="1">
+												<h2 align="left">Le repas de Ronflex</h2>
+											</font>
+										</th>
+										<th rowspan="2" width="6"></th>
+									</tr>
+									<tr height="160">
+										<th
+											colspan="4" valign="center" height="1">
+											<!-- <th valign = center  height="200"> -->
+											<a href="produitronflex.html">
+												<img width="240" height="150" src="img/produitronflex/ronflex.png" alt="">
+
+											</a>
+										</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="2"></td>
+										<td rowspan="2" width="25"></td>
+										<td rowspan="1" valign="baseline" align="center" width="150" height="100">
+
+											<p align="left">
+												<font size="3">
+													Remplissez votre ventre ! Deviendrez-vous somnolent comme Ronflex ?
+													<a href="produitronflex.html"><br>[voir plus...]</a>
+												</font>
+											</p>
+											<a href="produitronflex.html"></a>
+										</td>
+
+										<td width="6" rowspan="1" colspan="2" align="center">
+											<font size="2">
+												<h3>12.99€</h3>
+
+											</font>
+											<br>
+										</td>
+
+									</tr>
+									<tr>
+										<td colspan="2" valign="top" align="right">
+											<form action="../form/commander.html" method="get">
+												<input type="hidden" name="produitronflex">
+												<input type="submit" value="Achetez">&nbsp;
+											</form>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<table id="carte3" width="280" height="400" align="center" background="img/essai1.jpg">
+								<thead valign="top">
+									<tr>
+										<th rowspan="2" width="6"></th>
+										<th colspan="3" height="1">
+											<font size="1" height="1">
+												<h2 align="left">Crêpes aux fruits Pokémon Cafe</h2>
+											</font>
+										</th>
+										<th rowspan="2" width="6"></th>
+									</tr>
+									<tr height="160">
+										<th
+											colspan="4" valign="center" height="1">
+											<!-- <th valign = center  height="200"> -->
+											<a href="produitcrepe.html">
+												<img width="240" height="150" src="img/produitcrepe/crepes.png" alt="">
+
+											</a>
+										</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="2"></td>
+										<td rowspan="2" width="25"></td>
+										<td rowspan="1" valign="baseline" align="center" width="150" height="100">
+
+											<p align="left">
+												<font size="3">
+													Dégustez des crêpes originales avec une garniture de fruits abondante.
+													<a href="produitcrepe.html"><br>[voir plus...]</a>
+												</font>
+											</p>
+											<a href="produitcrepe.html"></a>
+										</td>
+
+										<td width="6" rowspan="1" colspan="2" align="center">
+											<font size="2">
+												<h3>15.99€</h3>
+
+											</font>
+											<br>
+										</td>
+
+									</tr>
+									<tr>
+										<td colspan="2" valign="top" align="right">
+											<form action="../form/commander.html" method="get">
+												<input type="hidden" name="produitcrepe">
+												<input type="submit" value="Achetez">&nbsp;
+											</form>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td>
+							<table id="carte4" width="280" height="400" align="center" background="img/essai1.jpg">
+								<thead valign="top">
+									<tr>
+										<th rowspan="2" width="6"></th>
+										<th colspan="3" height="1">
+											<font size="1" height="1">
+												<h2 align="left">Je vous choisis !</h2>
+											</font>
+										</th>
+										<th rowspan="2" width="6"></th>
+									</tr>
+									<tr height="160">
+										<th
+											colspan="4" valign="center" height="1">
+											<!-- <th valign = center  height="200"> -->
+											<a href="produitpokeball.html">
+												<img width="240" height="150" src="img/produitpokeball/pokeball.png" alt="">
+
+											</a>
+										</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td rowspan="2"></td>
+										<td rowspan="2" width="25"></td>
+										<td rowspan="1" valign="baseline" align="center" width="150" height="100">
+
+											<p align="left">
+												<font size="3">Ce qu'il y a à l'intérieur est un secret jusqu'à ce que vous arriviez ! Venez voir
+													<a href="produitpokeball.html"><br>[voir plus...]</a>
+												</font>
+											</p>
+											<a href="produitpokeball.html"></a>
+										</td>
+
+										<td width="6" rowspan="1" colspan="2" align="center">
+											<font size="2">
+												<h3>15.99€</h3>
+
+											</font>
+											<br>
+										</td>
+
+									</tr>
+									<tr>
+										<td colspan="2" valign="top" align="right">
+											<form action="../form/commander.html" method="get">
+												<input type="hidden" name="produitpokeball">
+												<input type="submit" value="Achetez">&nbsp;
+											</form>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
 </html>

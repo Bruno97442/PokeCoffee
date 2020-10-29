@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* mobile first */
+
+/* general */
+
+body {
+    background-color: lightyellow;
+    font: 16px Verdana,"Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+    position: relative;
+}
+
+h1 {
+    transition: 1s;
+    text-align: center;
+}
+/* index */
+#index {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    transition: 0.5s;
+    /* overflow: hidden; */
+}
+#index h1,
+#index #loader,
+#index .slider,
+#index .entree-btn {
+    position: absolute;
+}
+
+h1,
+.entree-btn {
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#index h1 {
+    top: 25%;
+    padding: 0.5em;
+    background-color: lightyellow;
+}
+.slider-show {
+    transition: 1s;
+    margin-top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.slider-show .container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: slideUp 24s steps(8) 0s infinite;
+    /* animation: slideUp 24s linear 0s infinite; */
+}
+@keyframes slideUp {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -800%;
+    }
+}
+.slider-show .slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: lightyellow;
+    background-position: center;
+}
+.slider-show .slide:nth-child(1) {
+    background-image: url("img/slider1.gif");
+}
+.slider-show .slide:nth-child(2) {
+    background-image: url("img/slider2.gif");
+    background-position: 50% 0;
+}
+.slider-show .slide:nth-child(3) {
+    background-image: url("img/slider3.gif");
+}
+.slider-show .slide:nth-child(4) {
+    background-image: url("img/slider4.gif");
+}
+.slider-show .slide:nth-child(5) {
+    background-image: url("img/slider5.jpg");
+}
+.slider-show .slide:nth-child(6) {
+    background-image: url("img/slider6.jpg");
+}
+.slider-show .slide:nth-child(7) {
+    background-image: url("img/slider7.jpg");
+}
+.slider-show .slide:nth-child(8) {
+    background-image: url("img/slider8.jpg");
+    background-position: top center;
+}
+.slider-show .slide:nth-child(9) {
+    background-image: url("img/slider8.jpg");
+    background-position: bottom center;
+}
+
+#loader {
+    left: 0vw;
+    width: 162px;
+    height: 69px;
+    /* animation: loadRunner 3s ease-in 0s infinite ; */
+}
+
+@keyframes loadRunner {
+    0% {
+        left: 100vw;
+    }
+    100% {
+        left: 0;
+    }
+}
+#loader img:nth-child(1) {
+    height: 4em;
+}
+#loader img:nth-child(2) {
+    height: 2.5em;
+}
+#loader img:nth-child(3) {
+    height: 3em;
+    margin-left: -25px;
+}
+
+.entree-btn {
+    top: 75%;
+    background: url("img/pokeSnack/header/index.jpg");
+    text-align: center;
+    line-height: 1.5em;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: xxx-large;
+    text-decoration: none;
+    color: yellow;
+}
+
+/* slide promo */
+.slider-promo {
+    transition: 0.5s;
+    position: relative;
+    overflow: auto;
+    opacity: 0;
+    height: 100%;
+}
+.slider-promo .container {
+    width: 400%;
+    height: 100%;
+    left: 0;
+    background-image: linear-gradient();
+}
+
+.slider-promo .slide {
+    position: relative;
+    float: left;
+    width: 100vw;
+    height: 100%;
+    display: block;
+    animation: promoSlider 16s linear 0s infinite;
+}
+@keyframes promoSlider {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -75%;
+    }
+}
+
+.slider-promo .slide:nth-child(1) {
+    background-color: rgba(255, 0, 0, 0.452);
+}
+.slider-promo .slide:nth-child(2) {
+    background-color: rgba(0, 0, 255, 0.486);
+}
+.slider-promo .slide:nth-child(3) {
+    background-color: rgba(0, 128, 0, 0.445);
+}
+.slider-promo .slide:nth-child(4) {
+    background-color: rgba(255, 255, 0, 0.493);
+}
+.slider-promo .slide:nth-child(5) {
+    background-color: rgba(255, 0, 0, 0.452);
+}
+
+.slider-promo .promo{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.slider-promo .promo *{
+    position: absolute;
+
+}
+.slider-promo p {
+    transform: translate(-100%, -50%);
+    left: 70%;
+    top: 65%;
+    background-color: rgba(255, 255, 255, 0.80);
+
+    padding: 2em 10px 10px 2em;
+    border-radius: 5px;
+    width: 40%;
+    min-width: 170px;
+    height: 25%;
+    font-size: large;
+    vertical-align: center;
+}
+
+.slider-promo a.entree-link {
+    left: 90%;
+    top: calc(90% + 10px);
+    border-radius: 5px;
+    padding: 0.5em;
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
+    width: auto;
+    width: auto;
+    background: linear-gradient(to bottom right, red, rgb(235, 140, 140));
+    transform: translate(-50%, -50%);
+    background-color: rgb(223, 70, 70);
+    transition: 0.5s;
+}
+.slider-promo a.entree-link:hover{
+    background: linear-gradient(to bottom right, rgb(255, 51, 51), rgb(206, 147, 147));
+
+}
+
+/* a voir si utile ou non mais bof */
+.slider-promo a::before, .slider-promo a::after {
+    /* content: ""; */
+    position: absolute;
+    border-top: 25px solid white;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    bottom: 89%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slider-promo a::before {
+    border-top: 25px solid black;
+    bottom: 86.5%;
+}
+/* a voir si utile ou non mais bof */
+/* menu */
+section#nav{
+    width: 100%;
+}
+section#nav{
+    display: none;
+    width: 100%;
+}
+
+/* entrer dans le main */
+#entree_checkbox {
+    display: none;
+}
+label[for="entree_checkbox"] {
+    z-index: 1;
+}
+
+
+#entree_checkbox:checked {
+    width: 20vw;
+    height: 20vw;
+    position: fixed;
+}
+#entree_checkbox:checked ~ #index{
+    height: 80vh;
+}
+/* #entree_checkbox:checked ~ #index div.slider-show {
+    height: 80%;
+}*/
+#entree_checkbox:checked ~ #index div.slider-promo {
+    opacity: 1;
+} 
+#entree_checkbox:checked ~ h1 {
+    top: 10%;
+}
+#entree_checkbox:checked ~ section#nav {
+    display: inline-block;
+    top: 10%;
+}
+
+
+
+/* dans le main */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
