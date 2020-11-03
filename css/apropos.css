@@ -1,0 +1,50 @@
+#a_propos article:nth-child(2){
+width: calc(60% - (var(--gap) * 2));
+float: left;
+height: 700px;
+}
+#a_propos article:nth-child(2) main{
+    width: auto;
+    height: 100%;
+}
+#a_propos article:nth-child(2) header{
+    width: auto;
+    height: auto;
+}
+#a_propos article:nth-child(2) main iframe{
+    width: 100%;
+    height: calc(100% - 120px);
+    border-radius: 5px;
+}
+#a_propos article:nth-child(3){
+width: calc(40% - (var(--gap) * 2));
+float: left;
+height: 700px;
+}
+#a_propos article:nth-child(4){
+width: calc(100% - (var(--gap) * 2));
+float: left;
+}
+#a_propos article:nth-child(4) p{
+    margin: 1em;
+    font-weight: bold;
+    cursor: pointer;
+}
+#a_propos article:nth-child(4) p>span{
+    display: block;
+    font-weight: normal;
+    text-align: justify;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+}
+#a_propos article:nth-child(4) input#question1:checked ~ label[for=question1] p>span{
+    height: 200px;
+}
+#a_propos article:nth-child(4) input#question2:checked ~ label[for=question2] p>span{
+    height: 350px;
+}
+#a_propos article:nth-child(4) input#question3:checked ~ label[for=question3] p>span{
+    height: 150px;
+}
+

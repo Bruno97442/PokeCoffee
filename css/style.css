@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* mobile first */
+
+/* general */
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: lightyellow;
+    font: 16px Verdana,"Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+    position: relative;
+}
+body>main{padding: 0 1em;}
+h1 {
+    transition: 1s;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    margin: 2em 0 1em;
+}
+h2::before, h2::after{
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: 12px;
+    background: url('../img/pokeSnack/produitpokeball/pokeball.png')  no-repeat center / cover ;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+h3, article {
+    --gap: 10px;
+    text-align: center;
+    padding: 25px;
+    margin: var(--gap);
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.24);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.473);
+}
+/* gestion des floats de pacotille */
+main section {
+    width: 100%;
+    position: relative;
+    overflow: auto;
+}
+/* presqu'un bootstrap float card */
+article {
+    min-width: 300px;
+    font-size: 1.2em;
+    /* display: inline-block; */
+    width: calc(33.33% - (var(--gap) * 2));
+    float: left;
+}
+article:nth-child(2),
+article:nth-child(3) {
+    width: calc(50% - (var(--gap) * 2));
+}
+
+article header {
+    width: 100%;
+    height: 51%;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+article header h4 {
+    position: relative;
+    height: 20px;
+    bottom: 0;
+    margin-bottom: 30px;
+}
+article header a {
+    display: block;
+    width: 100%;
+    height: calc( 100% - 30px );
+}
+article header a img{
+    height: 100%;
+
+}
+article main {
+    position: relative;
+    height: 30%;
+    padding: 10px 0;
+}
+article main p {
+    padding: 20px 0;
+    position: absolute;
+    transition: 0.5s ease;
+    text-align: justify;
+    overflow: hidden;
+    width: 100%;
+    top: 0;
+}
+
+article footer {
+    position: relative;
+    height: 10%;
+    margin: 10px 0;
+    text-align: right;
+}
+
+article footer form{
+    margin-left: auto;
+}
+article footer div{
+    display: inline-block;
+}
+article footer div span {
+    background-color: rgb(248, 107, 107);
+    text-align: right;
+    padding: 10px;
+    top: 10px;
+    position: relative;
+    border-radius: 5px;
+    font-size: xx-large;
+}
+
+article.article-50 {
+    width: calc(50% - (var(--gap) * 2));
+}
+
+article.article-66 {
+    width: calc(66.66% - (var(--gap) * 2));
+}
+article.article-100 {
+    width: calc(100% - (var(--gap) * 2));
+}
+article[class^="article"] header {
+    float: left;
+    height: 80%;
+    width: 55%;
+}
+
+article[class^="article"] main {
+    height: 80%;
+    margin: 1em 1em 0 0;
+    overflow: auto;
+}
+article[class^="article"] main p {
+    top: 50%;
+    width: auto;
+    transform: translateY(-50%);
+}
+/* index */
+#index {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    transition: 0.5s;
+    overflow: hidden;
+}
+#index h1,
+#index #loader,
+#index .slider,
+#index .entree-btn {
+    position: absolute;
+    
+}
+
+#index h1,
+.entree-btn {
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#index h1 {
+    top: 25%;
+    padding: 0.5em;
+    background-color: lightyellow;
+}
+.slider-show {
+    transition: 1s;
+    margin-top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+}
+.slider-show .container{
+    width: 900%;
+    height: 100%;
+    position: relative;
+    animation: slideUp 27s steps(9) 0s infinite;
+}
+
+.slider-show .slide {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    float: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: lightyellow;
+    background-position: center;
+ 
+}
+@keyframes slideUp {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -900%;
+    }
+}
+.slider-show .slide:nth-child(1) {
+    background-image: url("../img/slider1.gif");
+}
+.slider-show .slide:nth-child(2) {
+    background-image: url("../img/slider2.gif");
+    background-position: 50% 0;
+}
+.slider-show .slide:nth-child(3) {
+    background-image: url("../img/slider3.gif");
+}
+.slider-show .slide:nth-child(4) {
+    background-image: url("../img/slider4.gif");
+}
+.slider-show .slide:nth-child(5) {
+    background-image: url("../img/slider5.jpg");
+}
+.slider-show .slide:nth-child(6) {
+    background-image: url("../img/slider6.jpg");
+}
+.slider-show .slide:nth-child(7) {
+    background-image: url("../img/slider7.jpg");
+}
+.slider-show .slide:nth-child(8) {
+    background-image: url("../img/slider8.jpg");
+    background-position: top center;
+}
+.slider-show .slide:nth-child(9) {
+    background-image: url("../img/slider8.jpg");
+    background-position: bottom center;
+}
+
+#loader {
+    left: 0vw;
+    width: 162px;
+    height: 69px;
+    animation: loadRunner 3s ease-in 0s infinite ;
+}
+
+@keyframes loadRunner {
+    0% {
+        left: calc(100vw - 162px);
+    }
+    100% {
+        left: 0;
+    }
+}
+#loader img:nth-child(1) {
+    height: 4em;
+}
+#loader img:nth-child(2) {
+    height: 2.5em;
+}
+#loader img:nth-child(3) {
+    height: 3em;
+    margin-left: -25px;
+}
+
+.entree-btn {
+    transition: 0.5s;
+    top: 75%;
+    background: url("../img/pokeSnack/header/index.jpg");
+    text-align: center;
+    line-height: 1.5em;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: xxx-large;
+    text-decoration: none;
+    color: yellow;
+}
+
+/* slide promo */
+.slider-promo {
+    transition: 0.5s;
+    position: relative;
+    overflow: auto;
+    opacity: 0;
+    height: 100%;
+    overflow: hidden;
+}
+.slider-promo .container {
+    width: 500%;
+    height: 100%;
+    left: 0;
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0.7), rgba(0, 0, 255, 0.7),  rgba(0, 128, 0, 0.7), rgba(255, 255, 0, 0.7), rgba(255, 0, 0, 0.7));
+    animation: promoSlider 16s steps(4) 0s infinite;
+}
+
+.slider-promo .slide {
+    position: relative;
+    float: left;
+    width: 100vw;
+    height: 100%;
+}
+@keyframes promoSlider {
+    0% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -400%;
+    }
+}
+
+/* .slider-promo .slide:nth-child(1) {
+}
+.slider-promo .slide:nth-child(2) {
+}
+.slider-promo .slide:nth-child(3) {
+}
+.slider-promo .slide:nth-child(4) {
+}
+.slider-promo .slide:nth-child(5) {
+} */
+
+.slider-promo .promo{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.slider-promo .promo *{
+    position: absolute;
+
+}
+.slider-promo p {
+    transform: translate(-100%, -50%);
+    left: 70%;
+    top: 55%;
+    background-color: rgba(255, 255, 255, 0.80);
+    padding: 2em;
+    border-radius: 5px;
+    width: 40%;
+    min-width: 200px;
+    height: 25%;
+    font-size: large;
+    vertical-align: center;
+    animation: dynamikP 4s ease 0s infinite;
+}
+@keyframes dynamikP{
+    0%{ left: 80%; opacity: 0;}
+    50%{left: 70%; opacity: 1;}
+    100%{left: 70%; opacity: 1;}
+}
+
+
+.slider-promo a.entree-link {
+    text-decoration: none;
+    left: 90%;
+    top: calc(90% + 10px);
+    transform: translate(-50%, -50%);
+}
+.btn-gradient{
+    border-radius: 5px;
+    padding: 0.5em;
+    color: white;
+    font-size: x-large;
+    background: linear-gradient(to bottom right, red, rgb(235, 140, 140));
+    background-color: rgb(223, 70, 70);
+    transition: 0.5s;
+}
+
+.btn-gradient:hover{
+    background: linear-gradient(to bottom right, rgb(255, 51, 51), rgb(206, 147, 147));
+
+}
+
+
+/* dans le main */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+

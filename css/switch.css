@@ -1,0 +1,72 @@
+
+/* entrer dans le main */
+
+label[for="entree_checkbox"] {
+    z-index: 1;
+}
+
+.go-down-arrow{
+    position: absolute;
+    top: 110%;
+    padding: 5px;
+    left: 50%;
+    width: 80px;
+    text-align: center;
+    z-index: 2;
+    font-size: xxx-large;
+    text-decoration: none;
+    color: yellow;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background: url("../img/pokeSnack/header/index.jpg");
+    transition: 0.5s ease 0.5s;
+    opacity: 0;
+
+}
+
+input[type=checkbox], input[type=radio]{
+    display: none;
+}
+
+
+#entree_checkbox:checked {
+    width: 20vw;
+    height: 20vw;
+    position: fixed;
+}
+#entree_checkbox:checked ~ #index .entree-btn{
+    top: 110%;
+}
+#entree_checkbox:checked ~ #index .go-down-arrow{
+    opacity: 1;
+    top: 90%;
+
+}
+#entree_checkbox:checked ~ #index{
+    height: 80vh;
+}
+
+#entree_checkbox:checked ~ #index div.slider-promo {
+    opacity: 1;
+} 
+#entree_checkbox:checked ~ h1 {
+    top: 10%;
+}
+#entree_checkbox:checked ~ section#nav {
+    display: inline-block;
+    top: 10%;
+}
+/* dev */
+/* #index{
+    display: none;
+}
+body{
+    background-color: rgb(104, 104, 104);
+}
+
+#entree_checkbox:checked ~ #index .entree-btn{
+    top: 80%;
+}
+input[type=checkbox], input[type=radio]{
+    display: block;
+} */

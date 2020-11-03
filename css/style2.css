@@ -1,0 +1,151 @@
+/* menu */
+
+nav#nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+    height: 10vh;
+    background: url("../img/pokeSnack/header/index.jpg");
+    z-index: 100;
+}
+/* menu logo */
+
+nav#nav > section.logo {
+    float: left;
+    height: 100%;
+    overflow: auto;
+}
+nav#nav section.logo img {
+    height: 100%;
+    float: left;
+}
+nav#nav section.logo .logo-text {
+    float: left;
+    position: relative;
+    font-size: xxx-large;
+    font-weight: bold;
+    top: 50%;
+    left: -30px;
+    position: relative;
+    transform: translateY(-50%);
+    color: yellow;
+
+}
+
+/* menu burger et link */
+nav#nav section.nav-link {
+    float: right;
+    position: absolute;
+    width: 15%;
+    transition: 1s ease-out;
+    height: 100%;
+    top: 0;
+    right: 0;
+    transition: 0.5s ease-in-out;
+    border-bottom-left-radius: 50%;
+}
+
+nav#nav section.nav-link .link {
+    display: none;
+    list-style-type: none;
+}
+
+nav#nav .nav-link .link a {
+    display: block;
+    width: 200px;
+    text-align: center;
+    padding: 15px 0;
+    margin: 70px;
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+    transition: 0.5s;
+    position: relative;
+    font-weight: bold;
+}
+nav#nav .nav-link .link a:hover {
+    animation: hoverLink 0.5s ease-out;
+}
+@keyframes hoverLink {
+    0% {
+        top: 0;
+    }
+    50% {
+        top: -5px;
+    }
+    100% {
+        top: 0;
+    }
+}
+nav#nav .burger {
+    position: absolute;
+    right: 0;
+    width: 10vh;
+    height: 10vh;
+    transition: 0.5s linear 0s;
+    background-color: rgba(0, 0, 0, 0.541);
+    padding: 3px;
+}
+
+nav#nav .burger > div {
+    width: 80%;
+    height: calc(100% / 3 / 3);
+    background-color: yellow;
+    border-radius: 4px;
+    margin: 0 auto;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+}
+
+nav#nav .burger > div::before,
+nav#nav .burger > div::after {
+    content: "";
+    background-color: yellow;
+    position: absolute;
+    border-radius: 4px;
+    width: 90%;
+    height: 100%;
+    left: 10%;
+    transition: 0.5s ease;
+}
+nav#nav .burger > div::before {
+    top: -200%;
+}
+nav#nav .burger > div::after {
+    top: 200%;
+}
+
+/* on cheched */
+#nav_checkbox:checked ~ nav#nav .nav-link {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0%;
+    background-color: rgba(167, 255, 4, 0.938);
+}
+#nav_checkbox:checked ~ nav#nav .burger > div {
+    opacity: 1;
+    background-color: transparent;
+    transform: translateY(-50%);
+}
+#nav_checkbox:checked ~ nav#nav .burger > div::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%) rotate(225deg);
+}
+#nav_checkbox:checked ~ nav#nav .burger > div::after {
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%) rotate(-225deg);
+}
+
+#nav_checkbox:checked ~ nav#nav .nav-link .link {
+    display: block;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
