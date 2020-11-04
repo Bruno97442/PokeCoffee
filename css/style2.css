@@ -16,11 +16,11 @@ nav#nav > section.logo {
     height: 100%;
     overflow: auto;
 }
-nav#nav section.logo img {
+nav section.logo img {
     height: 100%;
     float: left;
 }
-nav#nav section.logo .logo-text {
+nav section.logo .logo-text {
     float: left;
     position: relative;
     font-size: xxx-large;
@@ -30,7 +30,6 @@ nav#nav section.logo .logo-text {
     position: relative;
     transform: translateY(-50%);
     color: yellow;
-
 }
 
 /* menu burger et link */
@@ -50,20 +49,27 @@ nav#nav section.nav-link .link {
     display: none;
     list-style-type: none;
 }
+/* nav#nav section.nav-link .link::after {
+    content: "";
+    width: ;
+    
+} */
 
 nav#nav .nav-link .link a {
+    color: black;
     display: block;
-    width: 200px;
+    width: auto;
     text-align: center;
-    padding: 15px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 0, 0.808);
     margin: 70px;
     text-decoration: none;
-    color: black;
     font-size: x-large;
     transition: 0.5s;
     position: relative;
     font-weight: bold;
 }
+
 nav#nav .nav-link .link a:hover {
     animation: hoverLink 0.5s ease-out;
 }
@@ -122,7 +128,8 @@ nav#nav .burger > div::after {
     width: 100vw;
     height: 100vh;
     border-radius: 0%;
-    background-color: rgba(167, 255, 4, 0.938);
+    /* background-color: rgba(167, 255, 4, 0.938); */
+    background: rgba(251, 255, 4, 0.938) url("../img/gardevoir.png") no-repeat bottom right;
 }
 #nav_checkbox:checked ~ nav#nav .burger > div {
     opacity: 1;
@@ -148,4 +155,18 @@ nav#nav .burger > div::after {
     right: 50%;
     top: 50%;
     transform: translate(50%, -50%);
+}
+
+/* redirection dans le footer */
+nav#redirection * {
+    font-size: 1rem;
+}
+nav#redirection img {
+    width: 50px;
+}
+nav#redirection .logo-text {
+    color: black;
+}
+nav#redirection .logo-text {
+    color: black;
 }

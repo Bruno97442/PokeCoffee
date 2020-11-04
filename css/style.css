@@ -14,7 +14,7 @@ body {
     font: 16px Verdana,"Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
     position: relative;
 }
-body>main{padding: 0 1em;}
+body>main{padding: 0 1em; position: relative;}
 h1 {
     transition: 1s;
     text-align: center;

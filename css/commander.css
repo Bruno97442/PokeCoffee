@@ -1,0 +1,38 @@
+/* section#commander *{ outline: 2px dotted purple;} */
+section#contacter, section#commander {
+    max-width: 1000px;
+    margin: 20px auto;
+    width: 100%;
+}
+
+#contacter img, #commander img {
+    float: right;
+    width: 100%;
+    max-width: 320px;
+}
+
+
+#contacter form, #commander form {
+    width: 50%;
+    min-width: 320px;
+    float: left;
+}
+#contacter form label, #commander form label {
+    display: block;
+    padding: 10px;
+    margin: 0 10px ;
+}
+#contacter form input:not([type=submit]), textarea, #commander form input:not([type=submit]) {
+    padding: 10px;
+    margin: 0 10px 10px 20px;
+    width: 50%;
+    min-width: 320px;
+}
+
+
+
+#contacter form >div input[type=submit], #commander form >div input[type=submit] {
+    float: right;
+    margin: auto;
+    border: none;
+}

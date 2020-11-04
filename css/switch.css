@@ -5,9 +5,8 @@ label[for="entree_checkbox"] {
     z-index: 1;
 }
 
-.go-down-arrow{
-    position: absolute;
-    top: 110%;
+.go-down-arrow, .go-up-arrow{
+    
     padding: 5px;
     left: 50%;
     width: 80px;
@@ -20,8 +19,17 @@ label[for="entree_checkbox"] {
     transform: translate(-50%, -50%);
     background: url("../img/pokeSnack/header/index.jpg");
     transition: 0.5s ease 0.5s;
-    opacity: 0;
+}
 
+.go-down-arrow{
+    position: absolute;
+    top: 110%;
+    opacity: 0;
+}
+.go-up-arrow{
+    position: sticky;
+    top: 95%;
+    left: 50%;
 }
 
 input[type=checkbox], input[type=radio]{

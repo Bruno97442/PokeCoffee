@@ -1,77 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Document</title>
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta http-equiv="refresh" content="0; url=show/slider.html"> -->
+	<title>Store | PokeCoffee</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+		integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/style2.css">
+	<link rel="stylesheet" href="../css/commander.css">
+	<link rel="stylesheet" href="../css/switch.css">
+</head>
 
-	<body>
+<body>
+	<input type="checkbox" name="nav_checkbox" id="nav_checkbox">
 
-		<h1>Enregistrer vous !</h1>
+	<nav id="nav">
+		<section class="logo">
+			<img src="../img/pokeSnack/header/logo3.png">
+			<div class="logo-text">
+				PokeCoffee
+			</div>
+		</section>
+
+		<section class="nav-link">
+			<label for="nav_checkbox">
+				<div class="burger">
+					<div></div>
+				</div>
+
+				<ul class="link">
+
+					<li>
+						<a onclick="document.body.children.nav_checkbox.checked = false" href="../">
+							Accueil
+						</a>
+					</li>
+					<li>
+						<a onclick="document.body.children.nav_checkbox.checked = false"
+							href="../#menu">Restauration</a>
+					</li>
+					<li>
+						<a onclick="document.body.children.nav_checkbox.checked = false"
+							href="../store/index.html">Store</a>
+					</li>
+					<li>
+						<a onclick="document.body.children.nav_checkbox.checked = false" href="../#a_propos">A
+							propos</a>
+					</li>
+					<li>
+						<a onclick="document.body.children.nav_checkbox.checked = false" href="../#contact">Contact</a>
+					</li>
+				</ul>
+			</label>
+		</section>
+	</nav>
+	<h1>Enregistrer vous !</h1>
+	<section id="commander">
+		<h2>Afin de finalizer votre commande, merci de nous indiquer vos coordonnées !</h2>
 		<form action="validation.html" method="GET" target="_parent">
-			<fieldset>
-				<legend>Afin de finalizer votre commande, merci de nous indiquer vos coordonnées !</legend>
-				<table width="850">
-					<tbody>
-						<tr>
-							<td width="150">
-								<label for="fname">Nom</label>
-							</td>
-							<td width="150">
-								<input type="text" id="fname" name="fname"><br><br>
-							</td>
-							<td rowspan="6" align="right">
-								<img src="../img/carapuce.png" alt="Titre" width="400">
-							</td>
-						</tr>
-						<tr>
-							<td>
+			<label for="fname">Nom</label>
+			<input type="text" id="fname" name="fname">
 
-								<label for="lname">Prenom</label>
-							</td>
-							<td>
-								<input type="text" id="lname" name="lname"><br><br>
-							</td>
-						</tr>
-						<tr>
-							<td>
+			<label for="lname">Prenom</label>
+			<input type="text" id="lname" name="lname">
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email">
 
-								<label for="email">Email</label>
-							</td>
-							<td>
-								<input type="email" id="email" name="email"><br><br>
-							</td>
-						</tr>
-						<tr>
-							<td>
-
-								<label for="adress">Adresse</label>
-							</td>
-							<td>
-								<input type="string" id="adress" name="adress"><br>
-							</td>
-						</tr>
-						<tr>
-							<td>
-
-								<label for="adress">Adresse comp.</label>
-							</td>
-							<td>
-								<input type="string" id="adress2" name="adress"><br>
-							</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="right">
-                                <input type="submit" value="Je m'enregistre !">
-
-                            </td>
-                        </tr>
-					</tbody>
-				</table>
-			</fieldset>
+			<label for="adress">Adresse</label>
+			<input type="string" id="adress" name="adress">
+			<label for="adress">Adresse comp.</label>
+			<input type="string" id="adress2" name="adress">
+			<div>
+				<input type="submit" class="btn-gradient" value="Je m'enregistre !">
+			</div>
 		</form>
-	</body>
+		<img src="../img/carapuce.png" alt="Titre" width="400">
+	</section>
+
+</body>
 
 </html>
