@@ -12,9 +12,10 @@ main section#store {
 }
 #store header ul {
     list-style-type: none;
+    display: flex;
 }
 #store header ul > li {
-    float: left;
+
     border-right: 2px solid transparent;
 }
 #store header ul > li> * {
@@ -43,109 +44,34 @@ main section#store {
     padding: 10px 20px;
 }
 
-#store aside > div > input:not(:checked) ~ article {
-    min-width: 150px;
-    max-width: calc((50% - 20px) /3);
+#store aside {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0;
 }
-#store aside > div > input:not(:checked) ~ article header label.store-good-clicking {
-    position: relative;
-    display: block;
-    content: "";
-    margin: auto;
-    height: 100px;
-    background-color: bisque;
+#store aside > div {
+    flex: 1 1 300px;
+    display: flex;
 }
-
-#store > main {
-    float: left;
-    margin: 10px;
-    width: 74.5%;
-    max-width: 600px;
-    height: 500px;
-    z-index: -1;
-}
-
-#store aside > div > input:not(:checked) ~ article {
-    position: relative;
-    min-width: 130px;
-    height: 153px;
-    float: right;
-}
-#store aside > div > input:not(:checked) ~ article header {
-    padding: 0;
-}
-#store aside > div > input:not(:checked) ~ article header h4,
-#store aside > div > input:not(:checked) ~ article main,
-#store aside > div > input:not(:checked) ~ article footer {
-    display: none;
-}
-#store aside > div > input:not(:checked) ~ article header label:hover{
-    cursor: pointer;
-}
-#store aside > div > input:not(:checked) ~ article header:hover h4 {
+#store aside article header label{
     display: inline-block;
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-    z-index: 1;
-    background-color: yellow;
-    height: min-content;
-    padding: 10px 5px;
-    border-radius: 5px;
-    transform: translate(-50%, 0);
-    animation: titleFading 0.5s ease;
-}
-@keyframes titleFading {
-    from {
-        transform: translate(-50%, 50%);
-        opacity: 0;
-    }
-    to {
-        transform: translate(-50%, 0);
-        opacity: 1;
-    }
-}
-
-#store aside > div > input:checked ~ article {
-    position: absolute;
-    width: 74.5%;
-    max-width: 600px;
-    height: 500px;
-    animation: articleFading 1s ease;
-}
-@keyframes articleFading {
-    0% {
-        opacity: 0;
-        transform: translateY(-20%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
-#store aside > div > input:checked ~ article header label {
-    position: relative;
-    display: block;
     width: 100%;
-    height: calc(100% - 25px);
+    min-height: 200px;
 }
-
-#store aside > div > input:checked ~ article>footer div{
-    float: left;
-}
-#store aside > div > input:checked ~ article footer form{
+#store aside article main p{
     position: relative;
 }
-#store aside > div > input:checked ~ article footer form input[type=submit]{
+#store aside article footer{
+ flex-flow: row nowrap;
+ font-size: 1rem;
+}
+#store aside article footer  *{
+    font-size: 1em;
+}
+#store aside article footer form input[type=submit]{
     cursor: pointer;
     border: none;
 }
 
-/* input[name=selection]#all:checked ~ article:not(.all){
-    display: none;
-} */
+#store aside div > 
 
-input[name="selection"]#mug:checked ~ aside article:not(.mug),
-input[name="selection"]#coffee:checked ~ aside article:not(.coffee) {
-    display: none;
-}

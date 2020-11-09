@@ -6,36 +6,41 @@
 /* mobile first */
 
 /* general */
-html{
+html {
     scroll-behavior: smooth;
 }
 body {
     background-color: lightyellow;
-    font: 16px Verdana,"Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+    font: 16px Verdana, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
     position: relative;
 }
-body>main{padding: 0 1em; position: relative;}
+body > main {
+    padding: 0 1em;
+    position: relative;
+}
 h1 {
     transition: 1s;
     text-align: center;
 }
 
-h2{
+h2 {
     text-align: center;
     margin: 2em 0 1em;
 }
-h2::before, h2::after{
+h2::before,
+h2::after {
     content: "";
     width: 40px;
     height: 40px;
     position: relative;
     top: 12px;
-    background: url('../img/pokeSnack/produitpokeball/pokeball.png')  no-repeat center / cover ;
+    background: url("../img/pokeSnack/produitpokeball/pokeball.png") no-repeat center / cover;
     display: inline-block;
     margin: 0 auto;
 }
 
-h3, article {
+h3,
+article {
     --gap: 10px;
     text-align: center;
     padding: 25px;
@@ -48,20 +53,29 @@ h3, article {
 main section {
     width: 100%;
     position: relative;
-    overflow: auto;
+    /* overflow: auto; */
 }
-/* presqu'un bootstrap float card */
+main#main > section > main.container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+/* le container d'article */
+main#main > section > main.container > section main {
+    display: flex;
+    flex-flow: row wrap;
+}
+/* presqu'un bootstrap flex card */
 article {
-    min-width: 300px;
+    min-width: 280px;
     font-size: 1.2em;
     /* display: inline-block; */
     width: calc(33.33% - (var(--gap) * 2));
-    float: left;
+    flex: 1 1 300px;
 }
-article:nth-child(2),
+/* article:nth-child(2),
 article:nth-child(3) {
     width: calc(50% - (var(--gap) * 2));
-}
+} */
 
 article header {
     width: 100%;
@@ -79,11 +93,10 @@ article header h4 {
 article header a {
     display: block;
     width: 100%;
-    height: calc( 100% - 30px );
+    height: calc(100% - 30px);
 }
-article header a img{
+article header a img {
     height: 100%;
-
 }
 article main {
     position: relative;
@@ -102,22 +115,24 @@ article main p {
 
 article footer {
     position: relative;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    
     height: 10%;
     margin: 10px 0;
-    text-align: right;
 }
 
-article footer form{
+article footer form {
     margin-left: auto;
 }
-article footer div{
+article footer div {
     display: inline-block;
 }
 article footer div span {
     background-color: rgb(248, 107, 107);
     text-align: right;
-    padding: 10px;
-    top: 10px;
+    /* padding: 10px; */
+    top: 8px;
     position: relative;
     border-radius: 5px;
     font-size: xx-large;
@@ -132,15 +147,22 @@ article.article-66 {
 }
 article.article-100 {
     width: calc(100% - (var(--gap) * 2));
+    flex: 1 0 auto;
 }
+
+article[class^="article"] {
+    display: flex;
+    flex-flow: row wrap;
+}
+
 article[class^="article"] header {
-    float: left;
     height: 80%;
-    width: 55%;
+    width: 50%;
 }
 
 article[class^="article"] main {
     height: 80%;
+    width: 45%;
     margin: 1em 1em 0 0;
     overflow: auto;
 }
@@ -148,6 +170,12 @@ article[class^="article"] main p {
     top: 50%;
     width: auto;
     transform: translateY(-50%);
+}
+article[class^="article"] footer {
+    height: 80%;
+    width: 45%;
+    margin: 1em 1em 0 auto;
+    overflow: auto;
 }
 /* index */
 #index {
@@ -162,7 +190,6 @@ article[class^="article"] main p {
 #index .slider,
 #index .entree-btn {
     position: absolute;
-    
 }
 
 #index h1,
@@ -184,7 +211,7 @@ article[class^="article"] main p {
     height: 100%;
     overflow: hidden;
 }
-.slider-show .container{
+.slider-show .container {
     width: 900%;
     height: 100%;
     position: relative;
@@ -200,7 +227,6 @@ article[class^="article"] main p {
     background-repeat: no-repeat;
     background-color: lightyellow;
     background-position: center;
- 
 }
 @keyframes slideUp {
     0% {
@@ -245,7 +271,7 @@ article[class^="article"] main p {
     left: 0vw;
     width: 162px;
     height: 69px;
-    animation: loadRunner 3s ease-in 0s infinite ;
+    animation: loadRunner 3s ease-in 0s infinite;
 }
 
 @keyframes loadRunner {
@@ -295,7 +321,14 @@ article[class^="article"] main p {
     width: 500%;
     height: 100%;
     left: 0;
-    background-image: linear-gradient(to left, rgba(255, 0, 0, 0.7), rgba(0, 0, 255, 0.7),  rgba(0, 128, 0, 0.7), rgba(255, 255, 0, 0.7), rgba(255, 0, 0, 0.7));
+    background-image: linear-gradient(
+        to left,
+        rgba(255, 0, 0, 0.7),
+        rgba(0, 0, 255, 0.7),
+        rgba(0, 128, 0, 0.7),
+        rgba(255, 255, 0, 0.7),
+        rgba(255, 0, 0, 0.7)
+    );
     animation: promoSlider 16s steps(4) 0s infinite;
 }
 
@@ -325,20 +358,19 @@ article[class^="article"] main p {
 .slider-promo .slide:nth-child(5) {
 } */
 
-.slider-promo .promo{
+.slider-promo .promo {
     position: relative;
     width: 100%;
     height: 100%;
 }
-.slider-promo .promo *{
+.slider-promo .promo * {
     position: absolute;
-
 }
 .slider-promo p {
     transform: translate(-100%, -50%);
     left: 70%;
     top: 55%;
-    background-color: rgba(255, 255, 255, 0.80);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 2em;
     border-radius: 5px;
     width: 40%;
@@ -348,12 +380,20 @@ article[class^="article"] main p {
     vertical-align: center;
     animation: dynamikP 4s ease 0s infinite;
 }
-@keyframes dynamikP{
-    0%{ left: 80%; opacity: 0;}
-    50%{left: 70%; opacity: 1;}
-    100%{left: 70%; opacity: 1;}
+@keyframes dynamikP {
+    0% {
+        left: 80%;
+        opacity: 0;
+    }
+    50% {
+        left: 70%;
+        opacity: 1;
+    }
+    100% {
+        left: 70%;
+        opacity: 1;
+    }
 }
-
 
 .slider-promo a.entree-link {
     text-decoration: none;
@@ -361,7 +401,7 @@ article[class^="article"] main p {
     top: calc(90% + 10px);
     transform: translate(-50%, -50%);
 }
-.btn-gradient{
+.btn-gradient {
     border-radius: 5px;
     padding: 0.5em;
     color: white;
@@ -371,11 +411,9 @@ article[class^="article"] main p {
     transition: 0.5s;
 }
 
-.btn-gradient:hover{
+.btn-gradient:hover {
     background: linear-gradient(to bottom right, rgb(255, 51, 51), rgb(206, 147, 147));
-
 }
-
 
 /* dans le main */
 
@@ -394,4 +432,3 @@ article[class^="article"] main p {
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 }
-

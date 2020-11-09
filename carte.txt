@@ -1,3 +1,14 @@
+let plan =
+    [
+        [
+            "libre",
+            "titre",
+            "class id et for",
+            "imgSouce.jpg",
+            "descr",
+            "prix"
+        ]
+    ]
 let pokeEntrees =
     [
         [
@@ -66,7 +77,7 @@ let mugs =
         [
             "mug",
             "Le BulbiMug",
-            "",
+            "bulbimug",
             "pokemug/bulbiMug.jpg",
             "Un Mug bizarre et original, bulbizar ré-haussera vos thés",
             "14,99"
@@ -193,7 +204,7 @@ let carte = (i, ele, stored = false) => `${ stored ? `<div><input type="radio" i
     <p>${ele[4]}</p>
 </main>
 <footer>
-    <div>Prix :<span class="btn-gradient">${ele[5]}€</span>
+    <div><span class="btn-gradient">${ele[5]}€</span>
     </div>
     ${ stored ? `<form action="/form/commander.html">
     <input type="hidden" name="id" value="${ele[2] + i}">
