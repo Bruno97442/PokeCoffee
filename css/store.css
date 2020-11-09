@@ -38,7 +38,9 @@ main section#store {
 }
 #store input[name="selection"]#all:checked ~ header label[for="all"],
 #store input[name="selection"]#mug:checked ~ header label[for="mug"],
-#store input[name="selection"]#coffee:checked ~ header label[for="coffee"] {
+#store input[name="selection"]#coffee:checked ~ header label[for="coffee"], 
+#store input[name="selection"]#plush:checked ~ header label[for="plush"]
+{
     background-color: rgba(255, 188, 188, 0.568);
     font-weight: bold;
     padding: 10px 20px;
@@ -53,13 +55,25 @@ main section#store {
     flex: 1 1 300px;
     display: flex;
 }
+#store aside article header h4{
+    text-align: left;
+}
 #store aside article header label{
     display: inline-block;
     width: 100%;
     min-height: 200px;
+    cursor: pointer;
+}
+#store aside article main{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #store aside article main p{
     position: relative;
+    background-color: rgba(255, 255, 224, 0.808);
+    box-shadow: -30px 0px 5px lightyellow;
 }
 #store aside article footer{
  flex-flow: row nowrap;
@@ -73,5 +87,28 @@ main section#store {
     border: none;
 }
 
-#store aside div > 
+#store > input[name="selection"]#mug:checked ~ aside > div:not(.mug),
+#store > input[name="selection"]#coffee:checked ~ aside > div:not(.coffee),
+#store > input[name="selection"]#plush:checked ~ aside > div:not(.plush)
+{
+    display: none;
+}
 
+#store aside > div > input:checked + article {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+article.plush,
+article.mug,
+article.coffee
+{
+    background-position: 95% 5%;
+    background-repeat: no-repeat;
+    background-size: 60px;
+}
+
+article.plush{ background-image: url("../img/gardevoir.png");}
+article.mug{ background-image: url("../img/bgBase.jpg");}
+article.coffee{ background-image: url("../img/coffeebg.png");}

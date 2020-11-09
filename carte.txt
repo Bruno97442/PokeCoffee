@@ -70,8 +70,6 @@ let pokeDesserts =
     ]
 
 
-
-
 let mugs =
     [
         [
@@ -97,9 +95,33 @@ let mugs =
             "pokemug/pokeMug.jpg",
             "Stocker votre boisson chaud... Attraper les Tous !",
             "12,99"
+        ],
+        [
+            "mug",
+            "Le Bat-mug",
+            "batmanMug",
+            "pokemug/batmanMug.jpg",
+            "Buvez toujour une boisson plus DARK !!",
+            "15,99"
+        ],
+        [
+            "mug",
+            "Le Smogo mug",
+            "smogoMug",
+            "pokemug/smogoMug.jpg",
+            "Vos boissons paresseront plus pétillants avec votre gazeur mug",
+            "15,99"
+        ],
+        [
+            "mug",
+            "WM mug",
+            "wonderwomanMug",
+            "pokemug/wonderwomanMug.png",
+            "Le peps au boue des doigts !",
+            "17,99"
         ]
     ]
-    let coffees =
+let coffees =
     [
         [
             "coffee",
@@ -140,6 +162,97 @@ let mugs =
             "coffee/pikafrappe.png",
             "Pour calmer vos hardeur de l'étincelle sur glace rafréchira vos neurones !",
             "12,99"
+        ],
+        [
+            "coffee",
+            "Le Sun Bat Coffee",
+            "summerbatmanCoffee",
+            "coffee/summerbatmanCoffee.jpg",
+            "Le café des étés les plus chauds dans le latex !",
+            "24,98"
+        ],
+        [
+            "coffee",
+            "Le Café de Batman",
+            "batmanCoffee",
+            "coffee/batmanCoffee.jpg",
+            "Rien de mieux pour vos nuits blanche !",
+            "18,98"
+        ],
+        [
+            "coffee",
+            "Le No Nooo Déca",
+            "strongbatmanCoffee",
+            "coffee/strongbatmanCoffee.jpg",
+            "Jamais tu ne trouveras chez Batman du déca@*#$% ! Même les italiens le trouve trop fort !",
+            "20,98"
+        ],
+        [
+            "coffee article-100",
+            "Le Wonder Woman Coffee",
+            "wonderwomanCoffee",
+            "coffee/wonderwomanCoffee.png",
+            "Le café qui vous met au garde-à-vous",
+            "26,98"
+        ]
+    ]
+let plushies =
+    [
+        [
+            "plush",
+            "Bulbizarre",
+            "bulbizarreFlush",
+            "plush/bulbizarre.jpg",
+            "Même si vos rêves seront des plus bizarre !! Avec bulbi vos songes seront fabuleux !!",
+            "35,49"
+        ],
+        [
+            "plush",
+            "Carapuce",
+            "carapuceFlush",
+            "plush/carapuce.jpeg",
+            "Avec un ami solide comme lui dans vos aventure, mettez la pression aux méchants !!",
+            "35,49"
+        ],
+        [
+            "plush",
+            "Dracofeu",
+            "dracofeu-Flush",
+            "plush/dracofeu.jpg",
+            "Tout feu, tout flamme, embrasez-vous à la conquête du monde avec votre dragon !!",
+            "50,49"
+        ],
+        [
+            "plush",
+            "Pikachu",
+            "pikachu-Flush",
+            "plush/pikachu.jpg",
+            "Adoptez un doudou électrique, c'est être charger à bloc pour les lendemains !!",
+            "35,49"
+        ],
+        [
+            "plush",
+            "Ronflex",
+            "ronflex-Flush",
+            "plush/ronflex.jpg",
+            "Voici le meilleur compagnon pour faire des choses folles comme dormir, surtout dormir !!",
+            "35,49"
+        ],
+        [
+            "plush",
+            "Ronflex, tu nous gonfles !",
+            "ronflex-Flush",
+            "plush/ronflexGonflable.jpg",
+            "Elle n'est pas livrée avec malheureusement !!",
+            "59,49"
+        ],
+        [
+            "plush",
+            "Wonderwoman !",
+            "wonderwoman-Flush",
+            "plush/wonderwoman.jpg",
+            "Avec elle vous n'aurez plus peur de rien !!",
+            "51,89"
         ]
     ]
 
@@ -193,11 +306,11 @@ let carteTable = (i, ele) => `<table id="carte${i}" width="280" height="400" ali
 </tr>
 </tbody>
 </table>`
-let carte = (i, ele, stored = false) => `${ stored ? `<div><input type="radio" id="${ele[2]}" name="good_input">`:""}<article id="entree${i}" class="all ${ele[0]} ${ele[2]}">
+let carte = (i, ele, stored = false) => `${stored ? `<div class="${ele[0]}"><input type="radio" id="${ele[2]}" name="good_input">` : ""}<article id="entree${i}" class="all ${ele[0]} ${ele[2]}">
 <header>
     <h4>${ele[1]}</h4>
     ${stored ? `<label class="store-good-clicking ${ele[2]}" for="${ele[2]}" ` : `<a ${ele[2]}" href="/img/${ele[3]}" target="_blank" `} style="background:url('/img/${ele[3]} ') no-repeat center / contain ;">
-    ${stored ? `</label>` : `</a>` }
+    ${stored ? `</label>` : `</a>`}
     
 </header>
 <main>
@@ -206,14 +319,14 @@ let carte = (i, ele, stored = false) => `${ stored ? `<div><input type="radio" i
 <footer>
     <div><span class="btn-gradient">${ele[5]}€</span>
     </div>
-    ${ stored ? `<form action="/form/commander.html">
+    ${stored ? `<form action="/form/commander.html">
     <input type="hidden" name="id" value="${ele[2] + i}">
     <input type="submit" value="Commander" class="btn-gradient">
-</form>`:""}
+</form>`: ""}
 </footer>
 </article>
-${ stored ? `</div>`:""}`
-let carteCheckbox = (i,ele) => `<input type="radio" id="${ele[2]}" name="good_input">`
+${stored ? `</div>` : ""}`
+let carteCheckbox = (i, ele) => `<input type="radio" id="${ele[2]}" name="good_input">`
 let fabrique = (tab, funcBuilder, label = false) => {
 
     tab.length
@@ -230,9 +343,8 @@ let fabrique = (tab, funcBuilder, label = false) => {
 }
 
 // document.querySelectorAll(".lesCartes").forEach(x => x.insertAdjacentHTML('afterbegin', fabrique(mugs)))
-document.querySelectorAll("#menu .entrees").forEach(x => x.insertAdjacentHTML('beforeend', fabrique(pokeEntrees, carte)))
-document.querySelectorAll("#menu .plats").forEach(x => x.insertAdjacentHTML('beforeend', fabrique(pokePlats, carte)))
-document.querySelectorAll("#menu .desserts").forEach(x => x.insertAdjacentHTML('beforeend', fabrique(pokeDesserts, carte)))
-document.querySelectorAll("#store .goods").forEach(x => x.insertAdjacentHTML('beforeend', fabrique(mugs, carte, true)))
-document.querySelectorAll("#store .goods").forEach(x => x.insertAdjacentHTML('beforeend', fabrique(coffees, carte, true)))
+// document.querySelectorAll("#menu .entrees").forEach(x => x.insertAdjacentHTML('beforeend', fabrique(pokeEntrees, carte)))
+// document.querySelectorAll("#menu .plats").forEach(x => x.insertAdjacentHTML('beforeend', fabrique(pokePlats, carte)))
+// document.querySelectorAll("#menu .desserts").forEach(x => x.insertAdjacentHTML('beforeend', fabrique(pokeDesserts, carte)))
+document.querySelectorAll("#store .goods").forEach(x => x.insertAdjacentHTML('beforeend', fabrique([...mugs, ...coffees, ...plushies], carte, true)))
 
