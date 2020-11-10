@@ -278,7 +278,7 @@ article[class^="article"] footer {
 
 @keyframes loadRunner {
     0% {
-        width: 100%;
+        left: 100%;
     }
     100% {
         left: 0;
