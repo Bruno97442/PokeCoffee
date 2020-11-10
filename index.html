@@ -289,7 +289,7 @@
 						<h3>Où nous trouver ?</h3>
 					</header>
 					<main>
-						<!-- <iframe align="center" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.271838514577!2d135.4985656157045!3d34.67308808044173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e710d94db9f7%3A0xa4e81bef85f911c7!2sPok%C3%A9mon%20Cafe!5e0!3m2!1sfr!2sfr!4v1603361351797!5m2!1sfr!2sfr" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+						<iframe align="center" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3281.271838514577!2d135.4985656157045!3d34.67308808044173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e710d94db9f7%3A0xa4e81bef85f911c7!2sPok%C3%A9mon%20Cafe!5e0!3m2!1sfr!2sfr!4v1603361351797!5m2!1sfr!2sfr" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 					</main>
 				</article>
 				<article id="equipe">
@@ -352,29 +352,33 @@
 			</main>
 		</section>
 		<section id="contacter">
-			<h2>
-				Contactez nous !
-			</h2>
+			<header>
+				<h2>
+					Contactez nous !
+				</h2>
+			</header>
+			<main>
+				<form action="form/validation.html" method="GET">
+					<main>
+						<label for="nom">Nom</label>
+						<input type="text" name="_nom" id="nom" size="40">
 
-			<form action="form/validation.html" method="GET">
+						<label for="">Mail</label>
+						<input type="mail" name="_mail" id="mail" size="40">
 
-
-				<label for="nom">Nom</label>
-				<input type="text" name="_nom" id="nom" size="40">
-
-				<label for="">Mail</label>
-				<input type="mail" name="_mail" id="mail" size="40">
-
-				<label for="message"> Votre Message</label>
-				<textarea class="form-control" name="_message" id="message" rows="10" maxlength="200"></textarea>
-				<div>
-					<input type="submit" value="Envoyer" class="btn-gradient">
-				</div>
-			</form>
-			<img src="img/gardevoir.png" alt="gardevoile">
+						<label for="message"> Votre Message</label>
+						<textarea class="form-control" name="_message" id="message" rows="10"
+							maxlength="200"></textarea>
+					</main>
+					<footer>
+						<input type="submit" value="Envoyer" class="btn-gradient">
+					</footer>
+				</form>
+				<img src="img/gardevoir.png" alt="gardevoile">
+			</main>
 
 		</section>
-		<div class="go-up-arrow">
+		<div class="div-go-up-arrow">
 
 			<a class="go-up-arrow" href="#nav">
 				<i class="fa fa-chevron-up" aria-hidden="true"></i>

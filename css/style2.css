@@ -8,21 +8,22 @@ nav#nav {
     height: 10vh;
     background: url("../img/pokeSnack/header/index.jpg");
     z-index: 100;
+    display: flex;
 }
 /* menu logo */
 
 nav#nav > section.logo {
-    float: left;
     height: 100%;
     overflow: auto;
+    display: flex;
+    justify-items: center;
 }
 nav section.logo img {
     height: 100%;
-    float: left;
 }
 nav section.logo .logo-text {
-    float: left;
     position: relative;
+    padding: 15px 0;
     font-size: xxx-large;
     font-weight: bold;
     top: 50%;
@@ -34,7 +35,6 @@ nav section.logo .logo-text {
 
 /* menu burger et link */
 nav#nav section.nav-link {
-    float: right;
     position: absolute;
     width: 15%;
     transition: 1s ease-out;

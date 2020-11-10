@@ -1,4 +1,6 @@
-
+:root{
+    --gap: 20px
+}
 main h1{
     display: none;
 }
@@ -46,58 +48,85 @@ main section#store {
     padding: 10px 20px;
 }
 
-#store aside {
+#store > main {
     display: flex;
     flex-flow: row wrap;
-    gap: 0;
+    gap: var(--gap);
 }
-#store aside > div {
+#store > main > div {
     flex: 1 1 300px;
     display: flex;
 }
-#store aside article header h4{
+#store > main article{
+
+    display: flex;
+    flex-flow: row wrap;
+    animation: slidefading 0.25s ease-out;
+}
+@keyframes slidefading{
+    0%{ opacity: 0; transform: translateY(-5%);}
+    100%{ opacity: 1; transform: translateY(0);}
+}
+#store > main article header{
+    flex: 1 1 300px;
+
+}
+#store > main article header h4{
     text-align: left;
 }
-#store aside article header label{
+#store > main article header label{
     display: inline-block;
     width: 100%;
     min-height: 200px;
     cursor: pointer;
 }
-#store aside article main{
+#store > main article main{
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+ flex: 1 1 300px;
+ align-self: center;
+
 }
-#store aside article main p{
+#store > main article main p{
     position: relative;
-    background-color: rgba(255, 255, 224, 0.808);
-    box-shadow: -30px 0px 5px lightyellow;
 }
-#store aside article footer{
+#store main article footer{
  flex-flow: row nowrap;
  font-size: 1rem;
+ justify-content: flex-end;
+ flex: 0 1 1200px;
+ align-self: center;
 }
-#store aside article footer  *{
+#store main article footer  *{
     font-size: 1em;
 }
-#store aside article footer form input[type=submit]{
+#store main article footer form input[type=submit]{
     cursor: pointer;
     border: none;
 }
 
-#store > input[name="selection"]#mug:checked ~ aside > div:not(.mug),
-#store > input[name="selection"]#coffee:checked ~ aside > div:not(.coffee),
-#store > input[name="selection"]#plush:checked ~ aside > div:not(.plush)
+#store > input[name="selection"]#mug:checked ~ main > div:not(.mug),
+#store > input[name="selection"]#coffee:checked ~ main > div:not(.coffee),
+#store > input[name="selection"]#plush:checked ~ main > div:not(.plush)
 {
     display: none;
 }
 
-#store aside > div > input:checked + article {
-    position: fixed;
-    top: 0;
-    left: 0;
+#store main > div > input:checked + article > label.closing{
+    position: absolute;
+    font: xxx-large / 25px monospace;
+    top: 25px;
+    right: 25px;
+    display: block;
+}
+#store main > div > input:checked + article > header label{
+ height: 50vh;
+}
+#store main > div > input:checked + article > footer{
+background-color: lightyellow;
+padding: 5px;
 }
 
 article.plush,
@@ -112,3 +141,29 @@ article.coffee
 article.plush{ background-image: url("../img/gardevoir.png");}
 article.mug{ background-image: url("../img/bgBase.jpg");}
 article.coffee{ background-image: url("../img/coffeebg.png");}
+
+
+#store main > div > article > label.closing{
+    display: none;
+}
+
+#store main > div > input:checked + article {
+    position: fixed;
+    z-index: 1000;
+    top: 20vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 90vw;
+    height: 70vh;
+    background-color: lightyellow;
+    animation: slidefading2 0.75s ease-out;
+}
+
+#store main > div > input:checked + article{
+    background-position: 50% 5%;
+}
+@keyframes slidefading2{
+    0%{ opacity: 0; transform: translate(-50%, -5%); top: 50%;}
+    50%{ transform: translate(-50%, 0); top: -100%;}
+    100%{ opacity: 1; transform: translate(-50%, 0); top: 25vh;}
+}

@@ -67,6 +67,8 @@
 			<input type="radio" name="selection" id="mug">
 			<input type="radio" name="selection" id="coffee">
 			<input type="radio" name="selection" id="plush">
+			<!-- fermer le popup -->
+			<input type="radio" id="good_input" name="good_input">
 			<header class="entete">
 				<ul>
 					<li>
@@ -88,501 +90,452 @@
 				</ul>
 			</header>
 			<!-- case de description produit -->
-			<main></main>
-			<aside class="goods">
-
-				<div class="mug"><input type="radio" id="bulbimug" name="good_input">
-					<article id="entree0" class="all mug bulbimug">
-						<header>
-							<h4>Le BulbiMug</h4>
-							<label class="store-good-clicking bulbimug" for="bulbimug"
-								style="background:url('/img/pokemug/bulbiMug.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Un Mug bizarre et original, bulbizar ré-haussera vos thés</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">14,99€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="bulbimug0">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="mug"><input type="radio" id="nanimug" name="good_input">
-					<article id="entree1" class="all mug nanimug">
-						<header>
-							<h4>Le "NANI" mug</h4>
-							<label class="store-good-clicking nanimug" for="nanimug"
-								style="background:url('/img/pokemug/naniMug.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Rien de mieux pour exprimer votre surprise à un nippon comme Pikachu !</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">9,99€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="nanimug1">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="mug"><input type="radio" id="pokeballmug" name="good_input">
-					<article id="entree2" class="all mug pokeballmug">
-						<header>
-							<h4>Le PokeBall mug</h4>
-							<label class="store-good-clicking pokeballmug" for="pokeballmug"
-								style="background:url('/img/pokemug/pokeMug.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Stocker votre boisson chaud... Attraper les Tous !</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">12,99€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="pokeballmug2">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="mug"><input type="radio" id="batmanMug" name="good_input">
-					<article id="entree3" class="all mug batmanMug">
-						<header>
-							<h4>Le Bat-mug</h4>
-							<label class="store-good-clicking batmanMug" for="batmanMug"
-								style="background:url('/img/pokemug/batmanMug.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Buvez toujour une boisson plus DARK !!</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">15,99€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="batmanMug3">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="mug"><input type="radio" id="smogoMug" name="good_input">
-					<article id="entree4" class="all mug smogoMug">
-						<header>
-							<h4>Le Smogo mug</h4>
-							<label class="store-good-clicking smogoMug" for="smogoMug"
-								style="background:url('/img/pokemug/smogoMug.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Vos boissons paresseront plus pétillants avec votre gazeur mug</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">15,99€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="smogoMug4">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="mug"><input type="radio" id="wonderwomanMug" name="good_input">
-					<article id="entree5" class="all mug wonderwomanMug">
-						<header>
-							<h4>WM mug</h4>
-							<label class="store-good-clicking wonderwomanMug" for="wonderwomanMug"
-								style="background:url('/img/pokemug/wonderwomanMug.png ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Le peps au boue des doigts !</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">17,99€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="wonderwomanMug5">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="coffee"><input type="radio" id="bulbathee" name="good_input">
-					<article id="entree6" class="all coffee bulbathee">
-						<header>
-							<h4>Le Bulbathée</h4>
-							<label class="store-good-clicking bulbathee" for="bulbathee"
-								style="background:url('/img/bulbizarre.png ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Un thé sulfureux où votre palais s'émerveillera des saveurs d'orient</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">14,99€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="bulbathee6">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="coffee"><input type="radio" id="theffroi" name="good_input">
-					<article id="entree7" class="all coffee theffroi">
-						<header>
-							<h4>Le Théffroi</h4>
-							<label class="store-good-clicking theffroi" for="theffroi"
-								style="background:url('/img/coffee/theffroi.png ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Son amerturne éffroi certain, d'autre en redemande !</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">9,99€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="theffroi7">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="coffee"><input type="radio" id="pikoffee" name="good_input">
-					<article id="entree8" class="all coffee pikoffee">
-						<header>
-							<h4>Le Pikoffee</h4>
-							<label class="store-good-clicking pikoffee" for="pikoffee"
-								style="background:url('/img/coffee/pikoffee.png ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Démarrer votre journer par un bon coup de jus, PIKACHUUUUUUU !</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">12,99€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="pikoffee8">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="coffee"><input type="radio" id="pikachino" name="good_input">
-					<article id="entree9" class="all coffee pikachino">
-						<header>
-							<h4>Le Pikachino</h4>
-							<label class="store-good-clicking pikachino" for="pikachino"
-								style="background:url('/img/slider7.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Picachu développe d'autres attaques foudroyantes sur votre palais !</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">12,99€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="pikachino9">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="coffee"><input type="radio" id="pikafrappe" name="good_input">
-					<article id="entree10" class="all coffee pikafrappe">
-						<header>
-							<h4>Le Pikafrappé</h4>
-							<label class="store-good-clicking pikafrappe" for="pikafrappe"
-								style="background:url('/img/coffee/pikafrappe.png ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Pour calmer vos hardeur de l'étincelle sur glace rafréchira vos neurones !</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">12,99€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="pikafrappe10">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="coffee"><input type="radio" id="summerbatmanCoffee" name="good_input">
-					<article id="entree11" class="all coffee summerbatmanCoffee">
-						<header>
-							<h4>Le Sun Bat Coffee</h4>
-							<label class="store-good-clicking summerbatmanCoffee" for="summerbatmanCoffee"
-								style="background:url('/img/coffee/summerbatmanCoffee.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Le café des étés les plus chauds dans le latex !</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">24,98€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="summerbatmanCoffee11">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="coffee"><input type="radio" id="batmanCoffee" name="good_input">
-					<article id="entree12" class="all coffee batmanCoffee">
-						<header>
-							<h4>Le Café de Batman</h4>
-							<label class="store-good-clicking batmanCoffee" for="batmanCoffee"
-								style="background:url('/img/coffee/batmanCoffee.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Rien de mieux pour vos nuits blanche !</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">18,98€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="batmanCoffee12">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="coffee"><input type="radio" id="strongbatmanCoffee" name="good_input">
-					<article id="entree13" class="all coffee strongbatmanCoffee">
-						<header>
-							<h4>Le No Nooo Déca</h4>
-							<label class="store-good-clicking strongbatmanCoffee" for="strongbatmanCoffee"
-								style="background:url('/img/coffee/strongbatmanCoffee.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Jamais tu ne trouveras chez Batman du déca@*#$% ! Même les italiens le trouve trop fort !
-							</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">20,98€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="strongbatmanCoffee13">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="coffee article-100"><input type="radio" id="wonderwomanCoffee" name="good_input">
-					<article id="entree14" class="all coffee article-100 wonderwomanCoffee">
-						<header>
-							<h4>Le Wonder Woman Coffee</h4>
-							<label class="store-good-clicking wonderwomanCoffee" for="wonderwomanCoffee"
-								style="background:url('/img/coffee/wonderwomanCoffee.png ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Le café qui vous met au garde-à-vous</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">26,98€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="wonderwomanCoffee14">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="plush"><input type="radio" id="bulbizarreFlush" name="good_input">
-					<article id="entree15" class="all plush bulbizarreFlush">
-						<header>
-							<h4>Bulbizarre</h4>
-							<label class="store-good-clicking bulbizarreFlush" for="bulbizarreFlush"
-								style="background:url('/img/plush/bulbizarre.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Même si vos rêves seront des plus bizarre !! Avec bulbi vos songes seront fabuleux !!</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">35,49€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="bulbizarreFlush15">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="plush"><input type="radio" id="carapuceFlush" name="good_input">
-					<article id="entree16" class="all plush carapuceFlush">
-						<header>
-							<h4>Carapuce</h4>
-							<label class="store-good-clicking carapuceFlush" for="carapuceFlush"
-								style="background:url('/img/plush/carapuce.jpeg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Avec un ami solide comme lui dans vos aventure, mettez la pression aux méchants !!</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">35,49€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="carapuceFlush16">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="plush"><input type="radio" id="dracofeu-Flush" name="good_input">
-					<article id="entree17" class="all plush dracofeu-Flush">
-						<header>
-							<h4>Dracofeu</h4>
-							<label class="store-good-clicking dracofeu-Flush" for="dracofeu-Flush"
-								style="background:url('/img/plush/dracofeu.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Tout feu, tout flamme, embrasez-vous à la conquête du monde avec votre dragon !!</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">50,49€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="dracofeu-Flush17">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="plush"><input type="radio" id="pikachu-Flush" name="good_input">
-					<article id="entree18" class="all plush pikachu-Flush">
-						<header>
-							<h4>Pikachu</h4>
-							<label class="store-good-clicking pikachu-Flush" for="pikachu-Flush"
-								style="background:url('/img/plush/pikachu.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Adoptez un doudou électrique, c'est être charger à bloc pour les lendemains !!</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">35,49€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="pikachu-Flush18">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="plush"><input type="radio" id="ronflex-Flush" name="good_input">
-					<article id="entree19" class="all plush ronflex-Flush">
-						<header>
-							<h4>Ronflex</h4>
-							<label class="store-good-clicking ronflex-Flush" for="ronflex-Flush"
-								style="background:url('/img/plush/ronflex.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Voici le meilleur compagnon pour faire des choses folles comme dormir, surtout dormir !!
-							</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">35,49€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="ronflex-Flush19">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="plush"><input type="radio" id="ronflex-Flush" name="good_input">
-					<article id="entree20" class="all plush ronflex-Flush">
-						<header>
-							<h4>Ronflex, tu nous gonfles !</h4>
-							<label class="store-good-clicking ronflex-Flush" for="ronflex-Flush"
-								style="background:url('/img/plush/ronflexGonflable.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Elle n'est pas livrée avec malheureusement !!</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">59,49€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="ronflex-Flush20">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-				<div class="plush"><input type="radio" id="wonderwoman-Flush" name="good_input">
-					<article id="entree21" class="all plush wonderwoman-Flush">
-						<header>
-							<h4>Wonderwoman !</h4>
-							<label class="store-good-clicking wonderwoman-Flush" for="wonderwoman-Flush"
-								style="background:url('/img/plush/wonderwoman.jpg ') no-repeat center / contain ;">
-							</label>
-
-						</header>
-						<main>
-							<p>Avec elle vous n'aurez plus peur de rien !!</p>
-						</main>
-						<footer>
-							<div><span class="btn-gradient">51,89€</span>
-							</div>
-							<form action="/form/commander.html">
-								<input type="hidden" name="id" value="wonderwoman-Flush21">
-								<input type="submit" value="Commander" class="btn-gradient">
-							</form>
-						</footer>
-					</article>
-				</div>
-			</aside>
+			<main class="goods"><div class="mug"><input type="radio" id="bulbimug" name="good_input"><article id="entree0" class="all mug bulbimug">
+				<header>
+					<h4>Le BulbiMug</h4>
+					<label class="store-good-clicking bulbimug" for="bulbimug" style="background:url('../img/pokemug/bulbiMug.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Un Mug bizarre et original, bulbizar ré-haussera vos thés</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">14,99€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="bulbimug0">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="mug"><input type="radio" id="nanimug" name="good_input"><article id="entree1" class="all mug nanimug">
+				<header>
+					<h4>Le "NANI" mug</h4>
+					<label class="store-good-clicking nanimug" for="nanimug" style="background:url('../img/pokemug/naniMug.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Rien de mieux pour exprimer votre surprise à un nippon comme Pikachu !</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">9,99€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="nanimug1">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="mug"><input type="radio" id="pokeballmug" name="good_input"><article id="entree2" class="all mug pokeballmug">
+				<header>
+					<h4>Le PokeBall mug</h4>
+					<label class="store-good-clicking pokeballmug" for="pokeballmug" style="background:url('../img/pokemug/pokeMug.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Stocker votre boisson chaud... Attraper les Tous !</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">12,99€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="pokeballmug2">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="mug"><input type="radio" id="batmanMug" name="good_input"><article id="entree3" class="all mug batmanMug">
+				<header>
+					<h4>Le Bat-mug</h4>
+					<label class="store-good-clicking batmanMug" for="batmanMug" style="background:url('../img/pokemug/batmanMug.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Buvez toujour une boisson plus DARK !!</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">15,99€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="batmanMug3">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="mug"><input type="radio" id="smogoMug" name="good_input"><article id="entree4" class="all mug smogoMug">
+				<header>
+					<h4>Le Smogo mug</h4>
+					<label class="store-good-clicking smogoMug" for="smogoMug" style="background:url('../img/pokemug/smogoMug.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Vos boissons paresseront plus pétillants avec votre gazeur mug</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">15,99€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="smogoMug4">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="mug"><input type="radio" id="wonderwomanMug" name="good_input"><article id="entree5" class="all mug wonderwomanMug">
+				<header>
+					<h4>WM mug</h4>
+					<label class="store-good-clicking wonderwomanMug" for="wonderwomanMug" style="background:url('../img/pokemug/wonderwomanMug.png ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Le peps au boue des doigts !</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">17,99€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="wonderwomanMug5">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="coffee"><input type="radio" id="bulbathee" name="good_input"><article id="entree6" class="all coffee bulbathee">
+				<header>
+					<h4>Le Bulbathée</h4>
+					<label class="store-good-clicking bulbathee" for="bulbathee" style="background:url('../img/bulbizarre.png ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Un thé sulfureux où votre palais s'émerveillera des saveurs d'orient</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">14,99€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="bulbathee6">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="coffee"><input type="radio" id="theffroi" name="good_input"><article id="entree7" class="all coffee theffroi">
+				<header>
+					<h4>Le Théffroi</h4>
+					<label class="store-good-clicking theffroi" for="theffroi" style="background:url('../img/coffee/theffroi.png ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Son amerturne éffroi certain, d'autre en redemande !</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">9,99€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="theffroi7">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="coffee"><input type="radio" id="pikoffee" name="good_input"><article id="entree8" class="all coffee pikoffee">
+				<header>
+					<h4>Le Pikoffee</h4>
+					<label class="store-good-clicking pikoffee" for="pikoffee" style="background:url('../img/coffee/pikoffee.png ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Démarrer votre journer par un bon coup de jus, PIKACHUUUUUUU !</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">12,99€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="pikoffee8">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="coffee"><input type="radio" id="pikachino" name="good_input"><article id="entree9" class="all coffee pikachino">
+				<header>
+					<h4>Le Pikachino</h4>
+					<label class="store-good-clicking pikachino" for="pikachino" style="background:url('../img/slider7.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Picachu développe d'autres attaques foudroyantes sur votre palais !</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">12,99€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="pikachino9">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="coffee"><input type="radio" id="pikafrappe" name="good_input"><article id="entree10" class="all coffee pikafrappe">
+				<header>
+					<h4>Le Pikafrappé</h4>
+					<label class="store-good-clicking pikafrappe" for="pikafrappe" style="background:url('../img/coffee/pikafrappe.png ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Pour calmer vos hardeur de l'étincelle sur glace rafréchira vos neurones !</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">12,99€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="pikafrappe10">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="coffee"><input type="radio" id="summerbatmanCoffee" name="good_input"><article id="entree11" class="all coffee summerbatmanCoffee">
+				<header>
+					<h4>Le Sun Bat Coffee</h4>
+					<label class="store-good-clicking summerbatmanCoffee" for="summerbatmanCoffee" style="background:url('../img/coffee/summerbatmanCoffee.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Le café des étés les plus chauds dans le latex !</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">24,98€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="summerbatmanCoffee11">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="coffee"><input type="radio" id="batmanCoffee" name="good_input"><article id="entree12" class="all coffee batmanCoffee">
+				<header>
+					<h4>Le Café de Batman</h4>
+					<label class="store-good-clicking batmanCoffee" for="batmanCoffee" style="background:url('../img/coffee/batmanCoffee.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Rien de mieux pour vos nuits blanche !</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">18,98€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="batmanCoffee12">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="coffee"><input type="radio" id="strongbatmanCoffee" name="good_input"><article id="entree13" class="all coffee strongbatmanCoffee">
+				<header>
+					<h4>Le No Nooo Déca</h4>
+					<label class="store-good-clicking strongbatmanCoffee" for="strongbatmanCoffee" style="background:url('../img/coffee/strongbatmanCoffee.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Jamais tu ne trouveras chez Batman du déca@*#$% ! Même les italiens le trouve trop fort !</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">20,98€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="strongbatmanCoffee13">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="coffee article-100"><input type="radio" id="wonderwomanCoffee" name="good_input"><article id="entree14" class="all coffee article-100 wonderwomanCoffee">
+				<header>
+					<h4>Le Wonder Woman Coffee</h4>
+					<label class="store-good-clicking wonderwomanCoffee" for="wonderwomanCoffee" style="background:url('../img/coffee/wonderwomanCoffee.png ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Le café qui vous met au garde-à-vous</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">26,98€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="wonderwomanCoffee14">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="plush"><input type="radio" id="bulbizarreFlush" name="good_input"><article id="entree15" class="all plush bulbizarreFlush">
+				<header>
+					<h4>Bulbizarre</h4>
+					<label class="store-good-clicking bulbizarreFlush" for="bulbizarreFlush" style="background:url('../img/plush/bulbizarre.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Même si vos rêves seront des plus bizarre !! Avec bulbi vos songes seront fabuleux !!</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">35,49€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="bulbizarreFlush15">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="plush"><input type="radio" id="carapuceFlush" name="good_input"><article id="entree16" class="all plush carapuceFlush">
+				<header>
+					<h4>Carapuce</h4>
+					<label class="store-good-clicking carapuceFlush" for="carapuceFlush" style="background:url('../img/plush/carapuce.jpeg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Avec un ami solide comme lui dans vos aventure, mettez la pression aux méchants !!</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">35,49€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="carapuceFlush16">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="plush"><input type="radio" id="dracofeu-Flush" name="good_input"><article id="entree17" class="all plush dracofeu-Flush">
+				<header>
+					<h4>Dracofeu</h4>
+					<label class="store-good-clicking dracofeu-Flush" for="dracofeu-Flush" style="background:url('../img/plush/dracofeu.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Tout feu, tout flamme, embrasez-vous à la conquête du monde avec votre dragon !!</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">50,49€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="dracofeu-Flush17">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="plush"><input type="radio" id="pikachu-Flush" name="good_input"><article id="entree18" class="all plush pikachu-Flush">
+				<header>
+					<h4>Pikachu</h4>
+					<label class="store-good-clicking pikachu-Flush" for="pikachu-Flush" style="background:url('../img/plush/pikachu.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Adoptez un doudou électrique, c'est être charger à bloc pour les lendemains !!</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">35,49€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="pikachu-Flush18">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="plush"><input type="radio" id="ronflex-Flush" name="good_input"><article id="entree19" class="all plush ronflex-Flush">
+				<header>
+					<h4>Ronflex</h4>
+					<label class="store-good-clicking ronflex-Flush" for="ronflex-Flush" style="background:url('../img/plush/ronflex.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Voici le meilleur compagnon pour faire des choses folles comme dormir, surtout dormir !!</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">35,49€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="ronflex-Flush19">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="plush"><input type="radio" id="ronflex-Flush" name="good_input"><article id="entree20" class="all plush ronflex-Flush">
+				<header>
+					<h4>Ronflex, tu nous gonfles !</h4>
+					<label class="store-good-clicking ronflex-Flush" for="ronflex-Flush" style="background:url('../img/plush/ronflexGonflable.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Elle n'est pas livrée avec malheureusement !!</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">59,49€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="ronflex-Flush20">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div><div class="plush"><input type="radio" id="wonderwoman-Flush" name="good_input"><article id="entree21" class="all plush wonderwoman-Flush">
+				<header>
+					<h4>Wonderwoman !</h4>
+					<label class="store-good-clicking wonderwoman-Flush" for="wonderwoman-Flush" style="background:url('../img/plush/wonderwoman.jpg ') no-repeat center / contain ;">
+					</label>
+					
+				</header>
+				<main>
+					<p>Avec elle vous n'aurez plus peur de rien !!</p>
+				</main>
+				<footer>
+					<div><span class="btn-gradient">51,89€</span>
+					</div>
+					<form action="/form/commander.html">
+					<input type="hidden" name="id" value="wonderwoman-Flush21">
+					<input type="submit" value="Commander" class="btn-gradient">
+				</form>
+				</footer>
+				<label class="closing btn-gradient" for="good_input">×</label>
+				</article>
+				</div></main>
+			
 
 
 		</section>
 	</main>
-
 </body>
 
 </html>
