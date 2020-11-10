@@ -177,8 +177,7 @@ article[class^="article"] main p {
     transform: translateY(-50%);
 }
 article[class^="article"] footer {
-    margin: 1em 1em 0 auto;
-    overflow: auto;
+    width: 100%;
 }
 /* index */
 #index {
