@@ -1,36 +1,59 @@
-#a_propos article:nth-child(2){
-width: calc(60% - (var(--gap) * 2));
-float: left;
-height: 700px;
+#a_propos {
+    display: flex;
+    flex-flow: row wrap;
 }
-#a_propos article:nth-child(2) main{
+
+#a_propos > header {
+    width: 100%;
+}
+#a_propos > main {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+#a_propos > main article header {
+    height: auto;
+}
+#a_propos > main article:nth-child(1) {
+    flex: 5 1 300px;
+}
+#a_propos > main article:nth-child(1) main {
     width: auto;
     height: 100%;
 }
-#a_propos article:nth-child(2) header{
+#a_propos > main article:nth-child(1) header {
     width: auto;
     height: auto;
 }
-#a_propos article:nth-child(2) main iframe{
+#a_propos > main article:nth-child(1) main iframe {
     width: 100%;
     height: calc(100% - 120px);
     border-radius: 5px;
 }
-#a_propos article:nth-child(3){
-width: calc(40% - (var(--gap) * 2));
-float: left;
-height: 700px;
+#a_propos > main article:nth-child(2) {
+    width: 100%;
+    flex: 2 1 300px;
+    order: 3;
 }
-#a_propos article:nth-child(4){
-width: calc(100% - (var(--gap) * 2));
-float: left;
+#a_propos > main article:nth-child(2) > main {
+    display: flex;
+    flex-flow: row wrap;
 }
-#a_propos article:nth-child(4) p{
+#a_propos > main article:nth-child(2) > main > *{
+    flex: 2 0 250px;
+}
+#a_propos > main article:nth-child(3) {
+    width: 100%;
+    flex: 2 1 300px;
+
+}
+
+#a_propos > main article:nth-child(3) p {
     margin: 1em;
     font-weight: bold;
     cursor: pointer;
 }
-#a_propos article:nth-child(4) p>span{
+#a_propos > main article:nth-child(3) p > span {
     display: block;
     font-weight: normal;
     text-align: justify;
@@ -38,13 +61,12 @@ float: left;
     overflow: hidden;
     transition: 0.5s ease-in-out;
 }
-#a_propos article:nth-child(4) input#question1:checked ~ label[for=question1] p>span{
+#a_propos > main article:nth-child(3) input#question1:checked ~ label[for="question1"] p > span {
     height: 200px;
 }
-#a_propos article:nth-child(4) input#question2:checked ~ label[for=question2] p>span{
+#a_propos > main article:nth-child(3) input#question2:checked ~ label[for="question2"] p > span {
     height: 350px;
 }
-#a_propos article:nth-child(4) input#question3:checked ~ label[for=question3] p>span{
+#a_propos > main article:nth-child(3) input#question3:checked ~ label[for="question3"] p > span {
     height: 150px;
 }
-

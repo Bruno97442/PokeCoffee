@@ -2,38 +2,60 @@
 section#contacter, section#commander {
     max-width: 1000px;
     margin: 20px auto;
+    padding: 0 1rem;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+section#contacter header, section#commander header{
     width: 100%;
 }
-
+section#contacter > main, section#commander > main{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+section#contacter > main, section#commander > main{
+    width: 100%;
+}
 #contacter img, #commander img {
-    float: right;
+    /* float: right; */
     width: 100%;
     max-width: 320px;
+}
+#commande picture{
+    flex: 0.5 1 320px;
+    text-align: center;
 }
 
 
 #contacter form, #commander form {
     width: 50%;
-    min-width: 320px;
-    float: left;
-    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 320px;
 }
+
 #contacter form label, #commander form label {
     display: block;
-    padding: 10px;
-    margin: 0 10px ;
 }
 #contacter form input:not([type=submit]), textarea, #commander form input:not([type=submit]) {
     padding: 10px;
-    margin: 0 10px 10px 20px;
-    width: 50%;
-    min-width: 320px;
+    width: 100%;
+    min-width: 250px;
+    margin: 0.7em 0 1.5em 0;
+
 }
 
+#contacter form >footer, #commander form >footer{
+    display: flex;
+    justify-content: flex-end;
+}
 
-
-#contacter form >div input[type=submit], #commander form >div input[type=submit] {
-    float: right;
-    margin: auto;
+#contacter form >footer input[type=submit], #commander form >footer input[type=submit] {
     border: none;
+    display: flex;
+    justify-content: flex-end;
 }

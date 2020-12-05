@@ -26,10 +26,12 @@ label[for="entree_checkbox"] {
     top: 110%;
     opacity: 0;
 }
+.div-go-up-arrow{
+
+}
 .go-up-arrow{
     position: sticky;
     top: 95%;
-    left: 50%;
 }
 
 input[type=checkbox], input[type=radio]{

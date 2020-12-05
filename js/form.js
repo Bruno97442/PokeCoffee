@@ -26,7 +26,7 @@ class FormController {
         this._formSelector = value;
     }
 
-    readyToSendForm = false;
+    readyToSendForm = [];
 
     formObject
 
@@ -47,47 +47,61 @@ class FormController {
 
 
     }
+    /**
+     * 
+     * @return {boolean} formulaire bien rempli
+     */
+    formController(){
+        let formState = []
+        this.inputs.forEach( input => formState.push(this.fieldController(input)))
+
+        return formState.every(x => x)
+    }
 
     /**
      * 
      * @param {HTMLInputElement} input 
+     * @return {boolean} champs bien rempli
      */
     fieldController(input) {
-        
-        let infoArray = this.inputType[input.getAttribute('type')].split(' ')
+
+        // récupère le tableau de directive des filtres regex
+        let infoArray = this.inputType[input.getAttribute('type')].split(' '),
+            state = []
+
+        // pour chaque filtre ecrit l'état de validation du champs dans le dataset
         infoArray.forEach((element) => {
-            input.dataset[element] = !!input.value.match(this.regexObject[element][0])
+            let match = !!input.value.match(this.regexObject[element][0])
+            input.dataset[element] = match
+            state.push(match)
         });
         input.alert.displayManager()
+
+        return state.every(x => x)
     }
 
     run() {
 
-
-
-        let event = this.event;
-
+        // gestion de la soumission
         this.form.addEventListener("submit", e => {
             e.preventDefault();
+            this.readyToSendForm = this.formController()
+            
             if (this.readyToSendForm) this.formObject = new FormEntity(document.querySelector('form'))
-
+            console.log(this.formObject)
         })
 
-        // 
+        // gestion des controle
         this.inputs.forEach(input => {
             input.alert = new InputAlert(input)
-            input.addEventListener(event, e => {
+            input.addEventListener(this.event, e => {
                 e.stopPropagation();
                 this.fieldController(input)
-
             })
         })
     }
-
 }
 
-let formEntity = new FormEntity(document.querySelector('form'));
+// let formEntity = new FormEntity(document.querySelector('form'));
 let formController = new FormController('form', 'keyup');
 formController.run()
-
-console.log(formEntity)

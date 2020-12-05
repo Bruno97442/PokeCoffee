@@ -309,7 +309,7 @@ let carteTable = (i, ele) => `<table id="carte${i}" width="280" height="400" ali
 let carte = (i, ele, stored = false) => `${stored ? `<div class="${ele[0]}"><input type="radio" id="${ele[2]}" name="good_input">` : ""}<article id="entree${i}" class="all ${ele[0]} ${ele[2]}">
 <header>
     <h4>${ele[1]}</h4>
-    ${stored ? `<label class="store-good-clicking ${ele[2]}" for="${ele[2]}" ` : `<a ${ele[2]}" href="/img/${ele[3]}" target="_blank" `} style="background:url('/img/${ele[3]} ') no-repeat center / contain ;">
+    ${stored ? `<label class="store-good-clicking ${ele[2]}" for="${ele[2]}" ` : `<a ${ele[2]}" href="/img/${ele[3]}" target="_blank" `} style="background:url('../img/${ele[3]} ') no-repeat center / contain ;">
     ${stored ? `</label>` : `</a>`}
     
 </header>
@@ -319,11 +319,12 @@ let carte = (i, ele, stored = false) => `${stored ? `<div class="${ele[0]}"><inp
 <footer>
     <div><span class="btn-gradient">${ele[5]}€</span>
     </div>
-    ${stored ? `<form action="/form/commander.html">
+    ${stored ? `<form action="../form/commander.html">
     <input type="hidden" name="id" value="${ele[2] + i}">
     <input type="submit" value="Commander" class="btn-gradient">
 </form>`: ""}
 </footer>
+<label class="closing btn-gradient" for="good_input">×</label>
 </article>
 ${stored ? `</div>` : ""}`
 let carteCheckbox = (i, ele) => `<input type="radio" id="${ele[2]}" name="good_input">`

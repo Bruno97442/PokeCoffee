@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="../css/style2.css">
 	<link rel="stylesheet" href="../css/commander.css">
 	<link rel="stylesheet" href="../css/switch.css">
+	<link rel="stylesheet" href="../css/formController.min.css">
 </head>
 
 <body>
@@ -59,25 +60,43 @@
 	</nav>
 	<h1>Enregistrer vous !</h1>
 	<section id="commander">
-		<h2>Afin de finalizer votre commande, merci de nous indiquer vos coordonnées !</h2>
-		<form action="validation.html" method="GET" target="_parent">
-			<label for="firstname">Nom</label>
-			<input type="text" id="firstname" name="firstname">
-			
-			<label for="lastname">Prenom</label>
-			<input type="text" id="lastname" name="lastname">
-			<label for="email">Email</label>
-			<input type="email" id="email" name="email">
+		<header>
+			<h2>Offrez vous du bonheur !</h2>
+			<p>Afin de finalizer votre commande, merci de nous indiquer vos coordonnées !</p>
+		</header>
+		<main>
+			<form action="validation.html" method="GET" target="_parent">
+				<main>
 
-			<label for="address">Adresse</label>
-			<input type="address" id="address" name="address">
-			<label for="address">Adresse comp.</label>
-			<input type="address" id="address2" name="address">
-			<div>
-				<input type="submit" class="btn-gradient" value="Je m'enregistre !">
-			</div>
-		</form>
-		<img src="../img/carapuce.png" alt="Titre" width="400">
+					
+					<label for="fname">Nom</label>
+					<input type="text" id="fname" name="fname">
+
+					
+					<label for="lname">Prenom</label>
+					<input type="text" id="lname" name="lname">
+					
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email">
+					
+					<label for="address">Adresse</label>
+					<input type="address" id="address" name="address">
+					
+					<label for="address">Adresse comp.</label>
+					<input type="address" id="address2" name="address">
+					
+					<input type="password" id="password2" name="password">
+				</main>
+
+				<footer>
+					<input type="submit" class="btn-gradient" value="Je m'enregistre !">
+				</footer>
+			</form>
+			<picture>
+				<img src="../img/carapuce.png" alt="Titre" width="400">
+			</picture>
+		</main>
+
 	</section>
 <script src="../js/form.js" type="module"></script>
 </body>
