@@ -16,6 +16,7 @@ section#contacter, section#commander {
     width: 50%;
     min-width: 320px;
     float: left;
+    position: relative;
 }
 #contacter form label, #commander form label {
     display: block;
