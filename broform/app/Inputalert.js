@@ -1,4 +1,4 @@
-import { alertMsg } from "./config.js";
+import { alertMsg } from "../config.js";
 
 export class InputAlert {
 

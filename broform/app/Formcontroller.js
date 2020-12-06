@@ -1,8 +1,10 @@
-import { inputType, regexObject } from "./config.js";
-import { FormEntity } from "./FormEntity.js";
-import { InputAlert } from "./InputAlert.js";
+import { inputType, regexObject } from "../config.js";
+import { Csscompiler } from "./Csscompiler.js";
 
-class FormController {
+import { FormEntity } from "./Formentity.js";
+import { InputAlert } from "./Inputalert.js";
+
+export class FormController {
 
     /**
      * @var {HTMLFormElement} form 
@@ -37,13 +39,24 @@ class FormController {
      * 
      * @param {string} formSelector 
      */
-    constructor(formSelector = "form", event = 'keyup') {
+    /**
+     * 
+     * @param {string} formSelector DomSelector
+     * @param {string} event Eventlistener event
+     * @param {boolean} alertMsgStyle "yes" | "no"
+     */
+    constructor(formSelector = "form", event = 'keyup', alertMsgStyle = "yes") {
         this.form = document.querySelector(formSelector);
         this.event = event;
         this.inputs = Array.from(this.form.querySelectorAll(`${formSelector} input[name]`))
-
         this.regexObject = regexObject
         this.inputType = inputType
+        console.log(alertMsgStyle)
+        if (alertMsgStyle === "yes") {
+            this.cssStyle = new Csscompiler()
+            this.cssStyle.createStyleSheet()
+            console.log('hé')
+        }
 
 
     }
@@ -51,9 +64,9 @@ class FormController {
      * 
      * @return {boolean} formulaire bien rempli
      */
-    formController(){
+    formController() {
         let formState = []
-        this.inputs.forEach( input => formState.push(this.fieldController(input)))
+        this.inputs.forEach(input => formState.push(this.fieldController(input)))
 
         return formState.every(x => x)
     }
@@ -86,7 +99,7 @@ class FormController {
         this.form.addEventListener("submit", e => {
             e.preventDefault();
             this.readyToSendForm = this.formController()
-            
+
             if (this.readyToSendForm) this.formObject = new FormEntity(document.querySelector('form'))
             console.log(this.formObject)
         })
@@ -103,5 +116,4 @@ class FormController {
 }
 
 // let formEntity = new FormEntity(document.querySelector('form'));
-let formController = new FormController('form', 'keyup');
-formController.run()
+

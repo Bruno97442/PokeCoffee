@@ -24,16 +24,16 @@ input[data-empty="false"] + div span.empty ~ span {
     display: none;
 }
 
-[class^=alertbubble]{
+[class^="alertbubble"] {
     border-radius: 5px;
     position: relative;
     padding: 0.5rem;
-    position : "relative";
-    margin : -0.5rem 0 0.5rem 0;
-    left : "0";
-    top : "100%";
-    background-color : #eb8c8c;
-    &::before{
+    position: "relative";
+    margin: -0.5rem 0 0.5rem 0;
+    left: "0";
+    top: "100%";
+    background-color: #eb8c8c;
+    &::before {
         content: "";
         display: block;
         position: absolute;
@@ -44,8 +44,6 @@ input[data-empty="false"] + div span.empty ~ span {
         border-right: 10px solid transparent;
     }
 }
-
-
 
 span.check::before {
     display: inline-block;
