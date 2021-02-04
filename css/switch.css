@@ -39,6 +39,9 @@ input[type=checkbox], input[type=radio]{
 }
 
 
+#entree_checkbox ~ .main {
+    display: none;
+}
 #entree_checkbox:checked {
     width: 20vw;
     height: 20vw;

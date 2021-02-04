@@ -5,7 +5,7 @@ nav#nav {
     top: 0;
     width: 100%;
 
-    height: 10vh;
+    height: 3rem;
     background: url("../img/pokeSnack/header/index.jpg");
     z-index: 100;
     display: flex;
@@ -17,6 +17,7 @@ nav#nav > section.logo {
     overflow: auto;
     display: flex;
     justify-items: center;
+    overflow: hidden;
 }
 nav section.logo img {
     height: 100%;
@@ -26,7 +27,7 @@ nav section.logo .logo-text {
     padding: 15px 0;
     font-size: xxx-large;
     font-weight: bold;
-    top: 50%;
+    /* top: 50%; */
     left: -30px;
     position: relative;
     transform: translateY(-50%);
@@ -87,26 +88,24 @@ nav#nav .nav-link .link a:hover {
 nav#nav .burger {
     position: absolute;
     right: 0;
-    width: 10vh;
-    height: 10vh;
+    width: 3rem;
+    height: 3rem;
     transition: 0.5s linear 0s;
     background-color: rgba(0, 0, 0, 0.541);
     padding: 3px;
 }
 
-nav#nav .burger > div {
+nav#nav .burger div {
     width: 80%;
     height: calc(100% / 3 / 3);
     background-color: yellow;
     border-radius: 4px;
     margin: 0 auto;
-    top: 50%;
     position: relative;
-    transform: translateY(-50%);
 }
 
-nav#nav .burger > div::before,
-nav#nav .burger > div::after {
+nav#nav .burger div::before,
+nav#nav .burger div::after {
     content: "";
     background-color: yellow;
     position: absolute;
@@ -116,40 +115,47 @@ nav#nav .burger > div::after {
     left: 10%;
     transition: 0.5s ease;
 }
-nav#nav .burger > div::before {
+nav#nav .burger div::before {
     top: -200%;
 }
-nav#nav .burger > div::after {
+nav#nav .burger div::after {
     top: 200%;
 }
 
 /* on cheched */
-#nav_checkbox:checked ~ nav#nav .nav-link {
+nav#nav .nav-link:focus-within {
+/* #nav_checkbox:checked ~ nav#nav .nav-link { */
     width: 100vw;
     height: 100vh;
     border-radius: 0%;
     /* background-color: rgba(167, 255, 4, 0.938); */
     background: rgba(251, 255, 4, 0.938) url("../img/gardevoir.png") no-repeat bottom right;
 }
-#nav_checkbox:checked ~ nav#nav .burger > div {
+nav#nav .nav-link:focus-within .burger {
+    pointer-events: none;
+}
+nav#nav .nav-link:focus-within .burger > div {
+/* #nav_checkbox:checked ~ nav#nav .burger > div { */
     opacity: 1;
     background-color: transparent;
-    transform: translateY(-50%);
 }
-#nav_checkbox:checked ~ nav#nav .burger > div::before {
+nav#nav .nav-link:focus-within .burger > div::before {
+/* #nav_checkbox:checked ~ nav#nav .burger > div::before { */
     top: 0;
     left: 0;
     width: 100%;
     transform: translateY(-50%) rotate(225deg);
 }
-#nav_checkbox:checked ~ nav#nav .burger > div::after {
+nav#nav .nav-link:focus-within .burger > div::after {
+/* #nav_checkbox:checked ~ nav#nav .burger > div::after { */
     top: 0;
     left: 0;
     width: 100%;
     transform: translateY(-50%) rotate(-225deg);
 }
 
-#nav_checkbox:checked ~ nav#nav .nav-link .link {
+nav#nav .nav-link:focus-within .link {
+/* #nav_checkbox:checked ~ nav#nav .nav-link .link { */
     display: block;
     position: absolute;
     right: 50%;

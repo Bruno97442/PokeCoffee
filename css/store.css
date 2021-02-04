@@ -125,7 +125,7 @@ main section#store {
  height: 50vh;
 }
 #store main > div > input:checked + article > footer{
-background-color: lightyellow;
+/* background-color: lightyellow; */
 padding: 5px;
 }
 
