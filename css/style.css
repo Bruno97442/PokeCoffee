@@ -403,9 +403,11 @@ article[class^="article"] footer {
         opacity: 1;
     }
 }
-
-.slider-promo a.entree-link {
+a.entree-link{
     text-decoration: none;
+
+}
+.slider-promo a.entree-link {
     position: absolute;
     bottom: -10px;
     right: -10px;
